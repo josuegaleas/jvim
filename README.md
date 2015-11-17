@@ -6,3 +6,4 @@ My personal set-up of VIM
 - [Airline](https://github.com/bling/vim-airline)
 - [Syntastic](https://github.com/scrooloose/syntastic)
 - [Molokai](https://github.com/tomasr/molokai)
+- [Fugitive](https://github.com/tpope/vim-fugitive)
