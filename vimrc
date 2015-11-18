@@ -10,8 +10,8 @@ set laststatus=2
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'ubaryd'
 "Extension Integration"
-let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#branch#enabled = 1
 
 """Syntastic"""
@@ -28,13 +28,17 @@ set whichwrap+=<,>,h,l,[,]
 "Searching"
 set incsearch
 set hlsearch
-"Auto-completion"
-set cindent
+"Auto-indenting"
+set smartindent
+set autoindent
+"Spell-checking"
+set spell
 "UI"
 set number
-set cul
+set cursorline
 set wildmenu
 set lazyredraw
 set showmatch
 "Tabbing"
 set tabstop=4
+set shiftwidth=4

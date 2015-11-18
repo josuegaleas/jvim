@@ -1,12 +1,12 @@
 # MyVIM
-My personal set-up of VIM
+My personal set-up of Vim
 
 **Currently in place:**
-- [Pathogen](https://github.com/tpope/vim-pathogen)
-- [Airline](https://github.com/bling/vim-airline)
-- [Syntastic](https://github.com/scrooloose/syntastic)
-- [Molokai](https://github.com/tomasr/molokai)
-- [Fugitive](https://github.com/tpope/vim-fugitive)
+- [Pathogen](https://github.com/tpope/vim-pathogen) – For managing plugins.
+- [Airline](https://github.com/bling/vim-airline) – Better statusline and tabline.
+- [Syntastic](https://github.com/scrooloose/syntastic) – For syntax checking.
+- [Molokai](https://github.com/tomasr/molokai) – Personal favorite colorscheme.
+- [Fugitive](https://github.com/tpope/vim-fugitive) - For Git functionality in Vim.
 
 ## Installation (WIP)
 Backup your .vim folder and .vimrc file. (I am not responsible for any data loss.)
