@@ -11,10 +11,14 @@ My personal set-up of Vim
 ## Installation (WIP)
 Backup your .vim folder and .vimrc file. (I am not responsible for any data loss.)
 ```
-git clone https://github.com/jdevalerie/MyVIM.git ~/MyVim
+git clone --recursive https://github.com/jdevalerie/MyVIM.git ~/MyVim
 cd ~/MyVim
-git submodule init && git submodule update
-git submodule foreach git pull
+git submodule foreach git checkout master
 ln -s ~/MyVim ~/.vim
 ln -s ~/MyVim/vimrc ~/.vimrc
+```
+To update submodules:
+```
+cd ~/MyVim
+git submodule foreach git pull
 ```
