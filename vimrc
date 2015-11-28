@@ -45,4 +45,3 @@ set tabstop=4
 set shiftwidth=4
 "Folding"
 set foldmethod=indent
-set foldcolumn=1
