@@ -22,6 +22,10 @@ let g:syntastic_check_on_wq = 0
 let g:gitgutter_override_sign_column_highlight = 0
 
 """General"""
+"Colorscheme"
+set t_Co=256;
+set background=dark;
+let g:rehash256=1
 colorscheme molokai
 "Functionality"
 set backspace=indent,eol,start
@@ -33,13 +37,14 @@ set hlsearch
 set smartindent
 set autoindent
 "Spell-checking"
-set spell
+"set spell 'Disabled for now'"
 "UI"
 set number
 set cursorline
 set wildmenu
 set lazyredraw
 set showmatch
+set list lcs=tab:\|\ "<- there's a space here"
 "Tabbing"
 set tabstop=4
 set shiftwidth=4
