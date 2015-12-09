@@ -13,7 +13,7 @@ Included:
 
 Installation
 ------------
-I highly recommend you have the latest version of Vim installed to ensure that everything functions properly.
+I highly recommend having the latest version of Vim installed to ensure that everything functions properly.
 ### For Linux/OS X users:
 **Backup** your `.vim` folder and `.vimrc` file. (I am **not** responsible for any data loss.)
 ```
