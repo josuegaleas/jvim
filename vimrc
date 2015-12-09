@@ -3,8 +3,7 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
-"Suggested by Nazim"
-call pathogen#helptags()
+execute pathogen#helptags()
 
 """Airline"""
 set laststatus=2
@@ -24,7 +23,6 @@ let g:gitgutter_override_sign_column_highlight = 0
 """General"""
 "Colorscheme"
 set t_Co=256;
-set background=dark;
 let g:rehash256=1
 colorscheme molokai
 "Functionality"
@@ -33,18 +31,18 @@ set whichwrap+=<,>,h,l,[,]
 "Searching"
 set incsearch
 set hlsearch
-"Auto-indenting"
+"Indenting"
 set smartindent
 set autoindent
 "Spell-checking"
-"set spell 'Disabled for now'"
+map <Leader>sc :setlocal spell!<cr> "toggle spell-checking with \sc"
 "UI"
 set number
 set cursorline
 set wildmenu
 set lazyredraw
 set showmatch
-set list lcs=tab:\|\ "<- there's a space here"
+set list lcs=tab:\|\ "<- there is a space here"
 "Tabbing"
 set tabstop=4
 set shiftwidth=4

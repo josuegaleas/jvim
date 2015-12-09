@@ -1,10 +1,10 @@
 MyVIM
 =====
-My personal set-up of Vim
+My personal set-up for terminal Vim
 
 Included:
 ---------
-* [Pathogen](https://github.com/tpope/vim-pathogen) — For managing plugins.
+* [Pathogen](https://github.com/tpope/vim-pathogen) — For managing plugins and runtime files.
 * [Airline](https://github.com/bling/vim-airline) — For a better statusline and tabline.
 * [Syntastic](https://github.com/scrooloose/syntastic) — For syntax checking.
 * [Molokai](https://github.com/tomasr/molokai) — Personal favorite colorscheme.
@@ -13,6 +13,7 @@ Included:
 
 Installation
 ------------
+I highly recommend you have the latest version of Vim installed to ensure that everything functions properly.
 ### For Linux/OS X users:
 **Backup** your `.vim` folder and `.vimrc` file. (I am **not** responsible for any data loss.)
 ```
