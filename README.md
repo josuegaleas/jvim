@@ -17,16 +17,14 @@ I highly recommend you have the latest version of Vim installed to ensure that e
 ### For Linux/OS X users:
 **Backup** your `.vim` folder and `.vimrc` file. (I am **not** responsible for any data loss.)
 ```
-git clone --recursive https://github.com/jdevalerie/MyVIM.git ~/MyVim
-cd ~/MyVim
-git submodule foreach git checkout master
-ln -s ~/MyVim ~/.vim
-ln -s ~/MyVim/vimrc ~/.vimrc
+git clone --recursive https://github.com/jdevalerie/jvim.git ~/jvim
+cd ~/jvim && git submodule foreach git checkout master
+ln -s ~/jvim ~/.vim
+ln -s ~/jvim/vimrc ~/.vimrc
 ```
 To update submodules:
 ```
-cd ~/MyVim
-git submodule foreach git pull
+cd ~/jvim && git submodule foreach git pull
 ```
 
 ### For Windows users:
