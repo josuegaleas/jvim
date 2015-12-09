@@ -1,4 +1,4 @@
-MyVIM
+jvim
 =====
 My personal set-up for terminal Vim
 
