@@ -13,7 +13,8 @@ Included:
 
 Installation
 ------------
-I highly recommend having the latest version of Vim installed to ensure that everything functions properly.
+I highly recommend having the latest version of Vim installed to ensure that everything functions properly, as some plugins require later version of Vim. I also recommend having a font that can support powerline symbols. I personally use [Hack](https://github.com/chrissimpkins/Hack) which comes with powerline symbols, but you can also use pre-patched fonts from [here](https://github.com/powerline/fonts).
+
 ### For Linux/OS X users:
 **Backup** your `.vim` folder and `.vimrc` file. (I am **not** responsible for any data loss.)
 ```
