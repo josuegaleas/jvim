@@ -10,6 +10,7 @@ Included:
 * [Molokai](https://github.com/tomasr/molokai) — Personal favorite colorscheme.
 * [Fugitive](https://github.com/tpope/vim-fugitive) — For Git functionality.
 * [GitGutter](https://github.com/airblade/vim-gitgutter) — For Git diff in the gutter, and hunk functionality.
+* [DelimitMate](https://github.com/Raimondi/delimitMate) — For auto-completion of quotes, parenthesis, brackets, etc.
 
 Installation
 ------------
