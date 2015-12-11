@@ -49,3 +49,6 @@ let g:syntastic_check_on_wq = 0
 
 """GitGutter"""
 let g:gitgutter_override_sign_column_highlight = 0
+
+"""DelimitMate"""
+let delimitMate_expand_cr = 1
