@@ -14,7 +14,9 @@ Included:
 
 Installation
 ------------
-I highly recommend having the latest version of Vim installed to ensure that everything functions properly, as some plugins require later version of Vim. I also recommend having a font that can support powerline symbols. I personally use [Hack](https://github.com/chrissimpkins/Hack) which comes with powerline symbols, but you can also use pre-patched fonts from [here](https://github.com/powerline/fonts).
+I highly recommend having the latest version of Vim installed to ensure that everything functions properly, as some plugins require later versions of Vim. If you are running on OS X, go down below to see a small guide on how to get the latest version of Vim.
+
+I also recommend having a font that can support powerline symbols. I personally use [Hack](https://github.com/chrissimpkins/Hack) which comes with powerline symbols, but you can also use pre-patched fonts from [here](https://github.com/powerline/fonts). Your preferred font may already have powerline symbol support, but you should also check in with the author of the font.
 
 ### For Linux/OS X users:
 **Backup** your `.vim` folder and `.vimrc` file. (I am **not** responsible for any data loss.)
@@ -30,4 +32,7 @@ cd ~/jvim && git submodule foreach git pull
 ```
 
 ### For Windows users:
+Coming soon...
+
+### How to Get the Latest Version Vim on OS X
 Coming soon...
