@@ -34,5 +34,6 @@ cd ~/jvim && git submodule foreach git pull
 ### For Windows users:
 Coming soon...
 
-### How to Get the Latest Version Vim on OS X
-Coming soon...
+How to Get the Latest Version of terminal Vim on OS X
+-----------------------------------------------------
+The Vim that comes with OS X is usually out of date. The quickest and easiest way to get up to date is to install MacVim through a package manager like [MacPorts](https://www.macports.org/) or [Homebrew](http://brew.sh/). Instead of trying to update the pre-installed Vim, it would be safer to just use the Vim binary that comes with MacVim. After installing MacVim, you can use `mvim -v` to run this Vim binary. For convenience, you can add this line to your `.bash_profile` file: `alias vim="mvim -v"`. You can then use `vim` as you usually would and it will use the Vim binary from MacVim.
