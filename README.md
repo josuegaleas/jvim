@@ -16,7 +16,7 @@ Installation
 ------------
 I highly recommend having the latest version of Vim installed to ensure that everything functions properly, as some plugins require later versions of Vim. If you are running on OS X, go down below to see a small guide on how to get the latest version of Vim.
 
-I also recommend having a font that can support powerline symbols. I personally use [Hack](https://github.com/chrissimpkins/Hack) which comes with powerline symbols, but you can also use pre-patched fonts from [here](https://github.com/powerline/fonts). Your preferred font may already have powerline symbol support, but you should also check in with the author of the font.
+I also recommend having a font that can support powerline symbols. I personally use [Hack](https://github.com/chrissimpkins/Hack) which comes with powerline symbols, but you can also use pre-patched fonts from [here](https://github.com/powerline/fonts). Your preferred font may already have powerline symbol support, but you should also check in with the author of the font. If you do not want to use powerline symbols, you can just comment out or delete the following line from the `vimrc` file: `let g:airline_powerline_fonts = 1`.
 
 ### For Linux/OS X users:
 **Backup** your `.vim` folder and `.vimrc` file. (I am **not** responsible for any data loss.)
