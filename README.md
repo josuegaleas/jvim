@@ -11,6 +11,7 @@ Included:
 * [Fugitive](https://github.com/tpope/vim-fugitive) — For Git functionality.
 * [GitGutter](https://github.com/airblade/vim-gitgutter) — For Git diff in the gutter, and hunk functionality.
 * [DelimitMate](https://github.com/Raimondi/delimitMate) — For auto-completion of quotes, parenthesis, brackets, etc.
+* [Gundo](https://github.com/vim-scripts/Gundo) — For visualizing the undo tree.
 
 Installation
 ------------
