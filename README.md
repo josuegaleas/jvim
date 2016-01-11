@@ -21,7 +21,7 @@ I also recommend having a font that can support powerline symbols. I personally 
 ### For Linux/OS X users:
 **Backup** your `.vim` folder and `.vimrc` file. (I am **not** responsible for any data loss.)
 ```
-git clone --recursive https://github.com/jdevalerie/jvim.git ~/jvim
+git clone --recursive https://github.com/josuegaleas/jvim.git ~/jvim
 cd ~/jvim && git submodule foreach git checkout master && cd ~
 ln -s ~/jvim ~/.vim
 ln -s ~/jvim/vimrc ~/.vimrc
