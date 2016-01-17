@@ -13,6 +13,9 @@ Included:
 * [DelimitMate](https://github.com/Raimondi/delimitMate) — For auto-completion of quotes, parenthesis, brackets, etc.
 * [Gundo](https://github.com/vim-scripts/Gundo) — For visualizing the undo tree.
 
+### Usage:
+Coming soon...
+
 Installation
 ------------
 I highly recommend having the latest version of Vim installed to ensure that everything functions properly, as some plugins require later versions of Vim. If you are running on OS X, go down below to see a small guide on how to get the latest version of Vim.
