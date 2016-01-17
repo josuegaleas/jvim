@@ -13,8 +13,11 @@ Included:
 * [DelimitMate](https://github.com/Raimondi/delimitMate) — For auto-completion of quotes, parenthesis, brackets, etc.
 * [Gundo](https://github.com/vim-scripts/Gundo) — For visualizing the undo tree.
 
-### Usage:
-Coming soon...
+Usage:
+------
+### Keyboard Shortcuts:
+* `\sc` — Toggles spell-checking
+* `\z` — Toggles Gundo's visual undo tree
 
 Installation
 ------------
