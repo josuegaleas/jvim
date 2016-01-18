@@ -24,7 +24,7 @@ let g:gitgutter_override_sign_column_highlight=0
 let delimitMate_expand_cr = 1
 
 """Gundo"""
-map <leader>z :GundoToggle<cr> "toggle undo tree with \z"
+map <leader>z :GundoToggle<cr>
 
 """General"""
 "Colorscheme"
@@ -42,7 +42,7 @@ set hlsearch
 set smartindent
 set autoindent
 "Spell-checking"
-map <Leader>sc :setlocal spell!<cr> "toggle spell-checking with \sc"
+map <Leader>sc :setlocal spell!<cr>
 "UI"
 set number
 set cursorline
