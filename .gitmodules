@@ -22,3 +22,9 @@
 [submodule "bundle/Gundo"]
 	path = bundle/Gundo
 	url = git://github.com/vim-scripts/Gundo.git
+[submodule "bundle/supertab"]
+	path = bundle/supertab
+	url = git://github.com/ervandew/supertab.git
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
+	url = git://github.com/scrooloose/nerdtree.git

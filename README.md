@@ -8,16 +8,19 @@ Included:
 * [Airline](https://github.com/bling/vim-airline) — For a better statusline and tabline.
 * [Syntastic](https://github.com/scrooloose/syntastic) — For syntax checking.
 * [Molokai](https://github.com/tomasr/molokai) — Personal favorite colorscheme.
-* [Fugitive](https://github.com/tpope/vim-fugitive) — For Git functionality.
+* [Fugitive](https://github.com/tpope/vim-fugitive) — For Git functionality within Vim.
 * [GitGutter](https://github.com/airblade/vim-gitgutter) — For Git diff in the gutter, and hunk functionality.
 * [DelimitMate](https://github.com/Raimondi/delimitMate) — For auto-completion of quotes, parenthesis, brackets, etc.
 * [Gundo](https://github.com/vim-scripts/Gundo) — For visualizing the undo tree.
+* [Supertab](https://github.com/ervandew/supertab.git) — For general insert completion.
+* [NERDTree](https://github.com/scrooloose/nerdtree.git) — For a filesystem explorer within Vim.
 
 Usage:
 ------
 ### Keyboard Shortcuts:
 * `\sc` — Toggles spell-checking
-* `\z` — Toggles Gundo's visual undo tree
+* `\cz` — Toggles Gundo's visual undo tree
+* `\nt` — Toggles NERDTree's filesystem explorer
 
 Installation
 ------------

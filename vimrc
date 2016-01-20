@@ -24,7 +24,10 @@ let g:gitgutter_override_sign_column_highlight=0
 let delimitMate_expand_cr = 1
 
 """Gundo"""
-map <leader>z :GundoToggle<cr>
+map <leader>cz :GundoToggle<cr>
+
+""NERDTree"""
+map <leader>nt :NERDTreeToggle<cr>
 
 """General"""
 "Colorscheme"
