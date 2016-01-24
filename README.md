@@ -11,15 +11,15 @@ Included:
 * [Fugitive](https://github.com/tpope/vim-fugitive) — For Git functionality within Vim.
 * [GitGutter](https://github.com/airblade/vim-gitgutter) — For Git diff in the gutter, and hunk functionality.
 * [DelimitMate](https://github.com/Raimondi/delimitMate) — For auto-completion of quotes, parenthesis, brackets, etc.
-* [Gundo](https://github.com/vim-scripts/Gundo) — For visualizing the undo tree.
 * [Supertab](https://github.com/ervandew/supertab.git) — For general insert completion.
 * [NERDTree](https://github.com/scrooloose/nerdtree.git) — For a filesystem explorer within Vim.
+* [Undotree](https://github.com/mbbill/undotree) — For visualizing the undo tree.
 
 Usage:
 ------
 ### Keyboard Shortcuts:
-* `\sc` — Toggles spell-checking
-* `\cz` — Toggles Gundo's visual undo tree
+* `\sc` — Toggles Vim's spell-checking
+* `\cz` — Toggles Undotree's visual undo tree
 * `\nt` — Toggles NERDTree's filesystem explorer
 
 Installation

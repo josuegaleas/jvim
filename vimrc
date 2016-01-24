@@ -17,22 +17,19 @@ let g:syntastic_auto_loc_list=1
 let g:syntastic_check_on_open=1
 let g:syntastic_check_on_wq=0
 
-"""GitGutter"""
-let g:gitgutter_override_sign_column_highlight=0
-
 """DelimitMate"""
 let delimitMate_expand_cr = 1
 
-"""Gundo"""
-map <leader>cz :GundoToggle<cr>
-
-""NERDTree"""
+"""NERDTree"""
 map <leader>nt :NERDTreeToggle<cr>
 
+"""Undotree"""
+map <leader>cz :UndotreeToggle<cr>
+
 """General"""
-"Colorscheme"
 set t_Co=256
 set encoding=utf8
+"Colorscheme"
 let g:rehash256=1
 colorscheme molokai
 "Functionality"
