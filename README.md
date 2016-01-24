@@ -1,9 +1,9 @@
 jvim
 =====
-My personal set-up for terminal Vim
+My personal setup for terminal Vim
 
-Included:
----------
+Included
+--------
 * [Pathogen](https://github.com/tpope/vim-pathogen) — For managing plugins and runtime files.
 * [Airline](https://github.com/bling/vim-airline) — For a better statusline and tabline.
 * [Syntastic](https://github.com/scrooloose/syntastic) — For syntax checking.
@@ -15,8 +15,8 @@ Included:
 * [NERDTree](https://github.com/scrooloose/nerdtree.git) — For a filesystem explorer within Vim.
 * [Undotree](https://github.com/mbbill/undotree) — For visualizing the undo tree.
 
-Usage:
-------
+Usage
+-----
 ### Keyboard Shortcuts:
 * `\sc` — Toggles Vim's spell-checking
 * `\cz` — Toggles Undotree's visual undo tree
@@ -47,3 +47,9 @@ Coming soon...
 How to Get the Latest Version of Terminal Vim on OS X
 -----------------------------------------------------
 The Vim that comes pre-installed with OS X is usually out of date. The quickest and easiest way to get up to date is to install MacVim through a package manager like [MacPorts](https://www.macports.org/) or [Homebrew](http://brew.sh/). Instead of trying to update the pre-installed Vim, it would be safer to just use the Vim binary that comes with MacVim. After installing MacVim, you can use `mvim -v` to run this Vim binary. For convenience, you can add this line to your `.bash_profile` file: `alias vim="mvim -v"`. You can then use `vim` as you normally would and it will use the Vim binary that comes with MacVim.
+
+Inspired By
+-----------
+* Mir Nazim's [Vim setup](http://mirnazim.org/writings/vim-plugins-i-use/)
+* Doug Black's [recommendations](http://dougblack.io/words/a-good-vimrc.html)
+* Luciano Fiandesio's [Vim setup](http://www.lucianofiandesio.com/vim-configuration-for-happy-java-coding)
