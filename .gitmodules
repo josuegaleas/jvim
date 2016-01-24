@@ -19,9 +19,6 @@
 [submodule "bundle/delimitMate"]
 	path = bundle/delimitMate
 	url = git://github.com/Raimondi/delimitMate.git
-[submodule "bundle/Gundo"]
-	path = bundle/Gundo
-	url = git://github.com/vim-scripts/Gundo.git
 [submodule "bundle/supertab"]
 	path = bundle/supertab
 	url = git://github.com/ervandew/supertab.git
