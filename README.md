@@ -19,8 +19,8 @@ Usage
 -----
 ### Keyboard Shortcuts:
 * `\sc` — Toggles Vim's spell-checking
-* `\cz` — Toggles Undotree's visual undo tree
 * `\nt` — Toggles NERDTree's filesystem explorer
+* `\cz` — Toggles Undotree's visual undo tree
 
 Installation
 ------------
