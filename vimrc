@@ -10,6 +10,7 @@ set laststatus=2
 let g:airline#extensions#tabline#enabled=1
 let g:airline_powerline_fonts=1
 let g:airline_theme='distinguished'
+let g:airline#extensions#whitespace#checks = ['indent', 'trailing', 'long']
 
 """Syntastic"""
 let g:syntastic_always_populate_loc_list=1
