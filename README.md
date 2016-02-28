@@ -1,6 +1,6 @@
 jvim
-=====
-My personal setup for terminal Vim
+====
+My personal setup for terminal Vim.
 
 Included
 --------
