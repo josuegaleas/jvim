@@ -41,7 +41,7 @@ ln -s ~/jvim/vimrc ~/.vimrc
 ```
 To update submodules:
 ```
-cd ~/jvim && git submodule foreach git pull
+cd ~/jvim && git submodule foreach git pull -v origin master
 ```
 
 ### For Windows users:
