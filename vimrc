@@ -27,6 +27,9 @@ map <leader>nt :NERDTreeToggle<cr>
 """Undotree"""
 map <leader>cz :UndotreeToggle<cr>
 
+"""Tagbar"""
+map <leader>tb :TagbarToggle<cr>
+
 """General"""
 set t_Co=256
 set encoding=utf8

@@ -15,6 +15,7 @@ Included
 - [Supertab](https://github.com/ervandew/supertab.git) — For general insert completion.
 - [NERDTree](https://github.com/scrooloose/nerdtree.git) — For a filesystem explorer within Vim.
 - [Undotree](https://github.com/mbbill/undotree) — For visualizing the undo tree.
+- [Tagbar](https://github.com/majutsushi/tagbar) — For browsing tags.
 
 Usage
 -----
@@ -22,10 +23,11 @@ Usage
 - `\sc` — Toggles Vim's spell-checking
 - `\nt` — Toggles NERDTree's filesystem explorer
 - `\cz` — Toggles Undotree's visual undo tree
+- `\tb` — Toggles Tagbar's tag explorer
 
 Installation
 ------------
-I highly recommend having the latest version of Vim installed to ensure that everything functions properly, as some plugins require later versions of Vim. If you are running on **OS X**, go down below to see a small guide on how to get the latest version of Vim.
+I highly recommend having the latest version of Vim installed to ensure that everything functions properly, as some plugins require later versions of Vim. If you are running on **OS X**, go down below to see a small guide on how to get the latest version of Vim. If you are running on **Linux**, getting the latest version of Vim will vary between distributions.
 
 I also recommend having a font that can support powerline symbols. I personally use [Hack](https://github.com/chrissimpkins/Hack) which comes with powerline symbols, but you can also use pre-patched fonts from [here](https://github.com/powerline/fonts). Your preferred font may already have powerline symbol support, but you should also check in with the author of the font. If you do not want to use powerline symbols, you can just comment out or delete the following line from the `vimrc` file: `let g:airline_powerline_fonts=1`.
 
@@ -47,9 +49,22 @@ cd ~/jvim && git submodule foreach git pull -v origin master
 ### For Windows users:
 Coming soon...
 
+### Tagbar Dependency:
+For Tagbar to function properly, you will need to install [Exuberant Ctags](http://ctags.sourceforge.net/).
+
+On OS X, you can install Ctags through [Homebrew](http://brew.sh/) with:
+```
+brew install ctags
+```
+On Linux, installing Ctags will vary between distributions.
+
+On Windows, coming soon...
+
 How to Get the Latest Version of Terminal Vim on OS X
 -----------------------------------------------------
-The Vim that comes pre-installed with OS X is usually out of date. The quickest and easiest way to get up to date is to install MacVim through a package manager like [MacPorts](https://www.macports.org/) or [Homebrew](http://brew.sh/). Instead of trying to update the pre-installed Vim, it would be safer to just use the Vim binary that comes with MacVim. After installing MacVim, you can use `mvim -v` to run this Vim binary. For convenience, you can add this line to your `.bash_profile` file: `alias vim="mvim -v"`. You can then use `vim` as you normally would and it will use the Vim binary that comes with MacVim.
+The Vim that comes pre-installed with OS X is usually out of date. The quickest and easiest way to get up to date is to install MacVim through a package manager like [Homebrew](http://brew.sh/). Instead of trying to update the pre-installed Vim, it is safer to use the Vim binary that comes with MacVim.
+
+After installing MacVim, you can use `mvim -v` to run this Vim binary. For convenience, you can add `alias vim="mvim -v"` to your `.bash_profile` file. With that alias, you can then use `vim` as you normally would, and it will use the Vim binary that comes with MacVim.
 
 Inspired By
 -----------
