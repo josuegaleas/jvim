@@ -46,6 +46,7 @@ Coming soon...
 
 ### Maintenance
 To update `.vimrc`, use `cd ~/.vim/jvim && git pull -v && cd ~`.
+
 To update plugins, launch `vim` and use the command `:PluginInstall!`.
 
 ### Tagbar Dependency
@@ -53,10 +54,7 @@ For Tagbar to function properly, you will need to install [Exuberant Ctags](http
 
 On Linux, installing Ctags will vary between distributions.
 
-On OS X, you can install Ctags through [Homebrew](http://brew.sh/) with:
-```
-brew install ctags
-```
+On OS X, you can install Ctags through [Homebrew](http://brew.sh/) with `brew install ctags`.
 
 On Windows, coming soon...
 
