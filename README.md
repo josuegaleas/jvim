@@ -44,23 +44,21 @@ To install plugins, launch `vim`, ignore the initial errors, and use the command
 ### For Windows
 Coming soon...
 
-### Maintenance
-To update `.vimrc`, use `cd ~/.vim/jvim && git pull -v && cd ~`.
-
-To update plugins, launch `vim` and use the command `:PluginInstall!`.
-
 ### Tagbar Dependency
 For Tagbar to function properly, you will need to install [Exuberant Ctags](http://ctags.sourceforge.net/).
+- On Linux, installing Ctags will vary between distributions.
+- On OS X, you can install Ctags through [Homebrew](http://brew.sh/) with `brew install ctags`.
+- On Windows, coming soon...
 
-On Linux, installing Ctags will vary between distributions.
+Maintenance
+-----------
+To update `.vimrc`, use `cd ~/.vim/jvim && git pull -v && cd ~`.
 
-On OS X, you can install Ctags through [Homebrew](http://brew.sh/) with `brew install ctags`.
-
-On Windows, coming soon...
+To update plugins, launch `vim` and use the command `:PluginUpdate`.
 
 How to Get the Latest Version of Terminal Vim on OS X
 -----------------------------------------------------
-The Vim that comes pre-installed with OS X is usually out of date. The quickest and easiest way to get up to date is to install MacVim through a package manager like [Homebrew](http://brew.sh/). Instead of trying to update the pre-installed Vim, it is safer to use the Vim binary that comes with MacVim.
+The Vim that comes pre-installed with OS X is usually out of date. The quickest and easiest way to get up to date is to install MacVim through a package manager like [Homebrew](http://brew.sh/) with `brew install macvim`. Instead of trying to update the pre-installed Vim, it is safer to use the Vim binary that comes with MacVim.
 
 After installing MacVim, you can use `mvim -v` to run this Vim binary. For convenience, you can add `alias vim="mvim -v"` to your `.bash_profile` file. With that alias, you can then use `vim` as you normally would, and it will use the Vim binary that comes with MacVim.
 
