@@ -21,11 +21,11 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'Raimondi/delimitMate'
 "Supertab — For general insert completion"
 Plugin 'ervandew/supertab'
-"NERDTree — For a filesystem explorer within Vim"
+"NERD Tree — For a filesystem explorer within Vim"
 Plugin 'scrooloose/nerdtree'
 "Undotree — For visualizing the undo tree"
 Plugin 'mbbill/undotree'
-"Tagbar — For browsing tags"
+"Tagbar — For browsing tags and viewing the outline"
 Plugin 'majutsushi/tagbar'
 
 call vundle#end()
@@ -47,7 +47,7 @@ let g:syntastic_check_on_wq=0
 """DelimitMate"""
 let delimitMate_expand_cr=1
 
-"""NERDTree"""
+"""NERD Tree"""
 map <leader>nt :NERDTreeToggle<cr>
 
 """Undotree"""
