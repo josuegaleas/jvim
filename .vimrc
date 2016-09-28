@@ -11,8 +11,6 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 "Syntastic — For syntax checking"
 Plugin 'scrooloose/syntastic'
-"Molokai — Personal favorite colorscheme"
-Plugin 'tomasr/molokai'
 "Fugitive — For Git functionality within Vim"
 Plugin 'tpope/vim-fugitive'
 "GitGutter — For Git diff in the gutter, and hunk functionality"
@@ -27,6 +25,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'mbbill/undotree'
 "Tagbar — For browsing tags and viewing the outline"
 Plugin 'majutsushi/tagbar'
+"jay — My own colorscheme"
+Plugin 'josuegaleas/jay'
 
 call vundle#end()
 filetype plugin indent on
@@ -60,8 +60,7 @@ map <leader>tb :TagbarToggle<cr>
 set t_Co=256
 set encoding=utf8
 "Colorscheme"
-let g:rehash256=1
-colorscheme molokai
+colorscheme jay
 "Functionality"
 set backspace=indent,eol,start
 set whichwrap+=<,>,h,l,[,]
@@ -73,6 +72,7 @@ set smartindent
 set autoindent
 "UI"
 syntax on
+set relativenumber
 set number
 set cursorline
 set wildmenu
