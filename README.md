@@ -19,6 +19,7 @@ Personal Setup for Terminal Vim
 ### Key Mappings:
 - `\sc` — Toggles Vim's spell-checking
 - `\pm` — Toggles Vim's paste mode
+- `\uh` — Unhighlights searches
 - `\nt` — Toggles NERD Tree's filesystem explorer
 - `\cz` — Toggles Undotree's visual undo tree
 - `\tb` — Toggles Tagbar's tag explorer
