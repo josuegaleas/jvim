@@ -45,6 +45,9 @@ let g:syntastic_auto_loc_list=1
 let g:syntastic_check_on_open=1
 let g:syntastic_check_on_wq=0
 
+"""GitGutter Preferences"""
+let g:gitgutter_override_sign_column_highlight=0
+
 """DelimitMate Preferences"""
 let delimitMate_expand_cr=1
 
