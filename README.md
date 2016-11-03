@@ -3,17 +3,25 @@ Personal Setup for Terminal Vim
 
 ## Included
 - [Vundle](https://github.com/VundleVim/Vundle.vim) — For managing plugins and runtime files
+
+##### Appearance
 - [Airline](https://github.com/vim-airline/vim-airline) — For a better statusline and tabline
-	- [Airline Themes](https://github.com/vim-airline/vim-airline-themes) — For themes for Airline
-- [Syntastic](https://github.com/scrooloose/syntastic) — For syntax checking
+- [jay](https://github.com/josuegaleas/jay) — My own Vim and Airline colorschemes
+
+##### Git
 - [Fugitive](https://github.com/tpope/vim-fugitive) — For Git functionality within Vim
 - [GitGutter](https://github.com/airblade/vim-gitgutter) — For Git diff in the gutter, and hunk functionality
-- [DelimitMate](https://github.com/Raimondi/delimitMate) — For auto-completion of quotes, parenthesis, brackets, etc
+
+##### Autocompletion
 - [Supertab](https://github.com/ervandew/supertab.git) — For general insert completion
+- [DelimitMate](https://github.com/Raimondi/delimitMate) — For auto-completion of quotes, parenthesis, brackets, etc
+
+##### Other Tools
+- [Syntastic](https://github.com/scrooloose/syntastic) — For syntax checking
 - [NERD Tree](https://github.com/scrooloose/nerdtree.git) — For a filesystem explorer within Vim
 - [Undotree](https://github.com/mbbill/undotree) — For visualizing the undo tree
 - [Tagbar](https://github.com/majutsushi/tagbar) — For browsing tags and viewing the outline
-- [jay](https://github.com/josuegaleas/jay) — My own colorscheme
+- [Commentary](https://github.com/tpope/vim-commentary) — For quick commenting
 
 ## Usage
 ### Key Mappings:
@@ -27,7 +35,7 @@ Personal Setup for Terminal Vim
 ## Installation
 I highly recommend having the latest version of Vim installed to ensure that everything functions properly, as some plugins require later versions of Vim. If you are running on **OS X**, go [here](https://github.com/josuegaleas/jvim/blob/master/OS%20X%20VIM.md) to see a small guide on how to get the latest version of Vim. If you are running on **Linux**, getting the latest version of Vim will vary between distributions.
 
-I also recommend having a font that can support powerline symbols. I personally use [Hack](https://github.com/chrissimpkins/Hack) which comes with powerline symbols, but you can also use pre-patched fonts from [here](https://github.com/powerline/fonts). Your preferred font may already have powerline symbol support, but you should also check in with the author of the font. If you do not want to use powerline symbols, you can just comment out or delete the following line from the `.vimrc` file: `let g:airline_powerline_fonts=1`.
+I also recommend having a font that can support powerline symbols. I personally use [Hack](https://github.com/chrissimpkins/Hack), which comes with powerline symbols. You could also use pre-patched fonts from [here](https://github.com/powerline/fonts). Your preferred font may already have powerline symbol support, but you should also check in with the author of the font. If you do not want to use powerline symbols, you can just comment out or delete the following line from the `.vimrc` file: `let g:airline_powerline_fonts=1`.
 
 **Backup** your `.vim` folder and `.vimrc` file. (I am **not** responsible for any data loss.)
 ```

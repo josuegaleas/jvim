@@ -1,85 +1,80 @@
-"""Plugins"""
+""" Plugins: """
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-"Vundle — For managing plugins and runtime files"
 Plugin 'VundleVim/Vundle.vim'
-"Airline — For a better statusline and tabline"
+" Appearance
 Plugin 'vim-airline/vim-airline'
-"Airline Themes — For themes for Airline"
-Plugin 'vim-airline/vim-airline-themes'
-"Syntastic — For syntax checking"
-Plugin 'scrooloose/syntastic'
-"Fugitive — For Git functionality within Vim"
-Plugin 'tpope/vim-fugitive'
-"GitGutter — For Git diff in the gutter, and hunk functionality"
-Plugin 'airblade/vim-gitgutter'
-"DelimitMate — For auto-completion of quotes, parenthesis, brackets, and so on"
-Plugin 'Raimondi/delimitMate'
-"Supertab — For general insert completion"
-Plugin 'ervandew/supertab'
-"NERD Tree — For a filesystem explorer within Vim"
-Plugin 'scrooloose/nerdtree'
-"Undotree — For visualizing the undo tree"
-Plugin 'mbbill/undotree'
-"Tagbar — For browsing tags and viewing the outline"
-Plugin 'majutsushi/tagbar'
-"jay — My own colorscheme"
 Plugin 'josuegaleas/jay'
+" Git
+Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
+" Autocompletion
+Plugin 'ervandew/supertab'
+Plugin 'Raimondi/delimitMate'
+" Other Tools
+Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/nerdtree'
+Plugin 'mbbill/undotree'
+Plugin 'majutsushi/tagbar'
+Plugin 'tpope/vim-commentary'
 
 call vundle#end()
 filetype plugin indent on
 
-"""Airline Preferences"""
+" Airline Preferences
 set laststatus=2
+set noshowmode
 let g:airline#extensions#tabline#enabled=1
 let g:airline_powerline_fonts=1
 let g:airline_theme='jay'
 let g:airline#extensions#whitespace#checks=['indent', 'trailing']
 
-"""Syntastic Preferences"""
+" GitGutter Preferences
+let g:gitgutter_override_sign_column_highlight=0
+
+" DelimitMate Preferences
+let delimitMate_expand_cr=1
+
+" Syntastic Preferences
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_check_on_open=1
 let g:syntastic_check_on_wq=0
 
-"""GitGutter Preferences"""
-let g:gitgutter_override_sign_column_highlight=0
-
-"""DelimitMate Preferences"""
-let delimitMate_expand_cr=1
-
-"""Key Mappings"""
-"Spell-checking"
+""" Key Mappings: """
+" Spell Checking
 noremap <leader>sc :setlocal spell!<cr>
-"Paste-mode"
+" Paste Mode
 noremap <leader>pm :set paste!<cr>
-"Unhighlight"
+" Unhighlight
 noremap <leader>uh :nohlsearch<cr>
-"NERD Tree"
+" NERD Tree
 noremap <leader>nt :NERDTreeToggle<cr>
-"Undotree"
+" Undotree
 noremap <leader>cz :UndotreeToggle<cr>
-"Tagbar"
+" Tagbar
 noremap <leader>tb :TagbarToggle<cr>
 
-"""General"""
-set t_Co=256
+""" General: """
+if !has('gui_running')
+	set t_Co=256
+endif
 set encoding=utf8
-"Colorscheme"
+" Colorscheme
 colorscheme jay
-"Functionality"
+" Functionality
 set backspace=indent,eol,start
 set whichwrap+=<,>,h,l,[,]
-"Searching"
+" Searching
 set incsearch
 set hlsearch
-"Indenting"
+" Indenting
 set smartindent
 set autoindent
-"UI"
+" UI
 syntax on
 set relativenumber
 set number
@@ -88,8 +83,8 @@ set wildmenu
 set lazyredraw
 set showmatch
 set list lcs=tab:\|\ "<- there is a space here"
-"Tabbing"
+" Tabbing
 set tabstop=4
 set shiftwidth=4
-"Folding"
+" Folding
 set foldmethod=indent
