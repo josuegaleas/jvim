@@ -1,3 +1,10 @@
+" =============================================================================
+" Author: josuegaleas
+" Source: https://github.com/josuegaleas/jvim
+" Last Edit: November 4th, 2016
+" Description: Yet another vimrc for Vim.
+" =============================================================================
+
 """ Plugins: """
 set nocompatible
 filetype off
@@ -24,18 +31,16 @@ Plugin 'tpope/vim-commentary'
 call vundle#end()
 filetype plugin indent on
 
-" Airline Preferences
+" vim-airline Preferences
 set laststatus=2
 set noshowmode
 let g:airline#extensions#tabline#enabled=1
-let g:airline_powerline_fonts=1
 let g:airline_theme='jay'
-let g:airline#extensions#whitespace#checks=['indent', 'trailing']
 
-" GitGutter Preferences
+" vim-gitgutter Preferences
 let g:gitgutter_override_sign_column_highlight=0
 
-" DelimitMate Preferences
+" delimitMate Preferences
 let delimitMate_expand_cr=1
 
 " Syntastic Preferences
@@ -51,7 +56,7 @@ noremap <leader>sc :setlocal spell!<cr>
 noremap <leader>pm :set paste!<cr>
 " Unhighlight
 noremap <leader>uh :nohlsearch<cr>
-" NERD Tree
+" The NERD Tree
 noremap <leader>nt :NERDTreeToggle<cr>
 " Undotree
 noremap <leader>cz :UndotreeToggle<cr>
@@ -64,27 +69,28 @@ if !has('gui_running')
 endif
 set encoding=utf8
 " Colorscheme
+syntax on
 colorscheme jay
 " Functionality
 set backspace=indent,eol,start
 set whichwrap+=<,>,h,l,[,]
-" Searching
+" Searches
 set incsearch
 set hlsearch
-" Indenting
+" Indents
 set smartindent
 set autoindent
-" UI
-syntax on
+" Number Line
 set relativenumber
 set number
+" UI
 set cursorline
 set wildmenu
 set lazyredraw
 set showmatch
-set list lcs=tab:\|\ "<- there is a space here"
-" Tabbing
+set list lcs=tab:\|\ "<- there is a space here
+" Tabs
 set tabstop=4
 set shiftwidth=4
-" Folding
+" Folds
 set foldmethod=indent
