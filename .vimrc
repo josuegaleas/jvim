@@ -1,7 +1,7 @@
 " =============================================================================
 " Author: josuegaleas
 " Source: https://github.com/josuegaleas/jvim
-" Last Edit: November 4th, 2016
+" Last Edit: November 26th, 2016
 " Description: Yet another vimrc for Vim.
 " =============================================================================
 
@@ -32,6 +32,7 @@ call vundle#end()
 filetype plugin indent on
 
 " vim-airline Preferences
+set showtabline=2
 set laststatus=2
 set noshowmode
 let g:airline#extensions#tabline#enabled=1
@@ -70,6 +71,7 @@ endif
 set encoding=utf8
 " Colorscheme
 syntax on
+set background=dark
 colorscheme jay
 " Functionality
 set backspace=indent,eol,start
