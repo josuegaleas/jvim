@@ -1,7 +1,7 @@
 " =============================================================================
 " Author: josuegaleas
 " Source: https://github.com/josuegaleas/jvim
-" Last Edit: November 26th, 2016
+" Last Edit: December 28th, 2016
 " Description: Yet another vimrc for Vim.
 " =============================================================================
 
@@ -14,7 +14,9 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 " Appearance
 Plugin 'vim-airline/vim-airline'
+" Plugin 'itchyny/lightline.vim'
 Plugin 'josuegaleas/jay'
+Plugin 'octol/vim-cpp-enhanced-highlight'
 " Git
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
@@ -27,6 +29,14 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'mbbill/undotree'
 Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-commentary'
+Plugin 'JamshedVesuna/vim-markdown-preview'
+" Colorscheme Tools
+Plugin 'tomasr/molokai'
+Plugin 'guns/xterm-color-table.vim'
+Plugin 'chrisbra/Colorizer.git'
+Plugin 'gerw/vim-HiLinkTrace'
+" Environment
+Plugin 'edkolev/promptline.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -36,7 +46,13 @@ set showtabline=2
 set laststatus=2
 set noshowmode
 let g:airline#extensions#tabline#enabled=1
+let g:airline_powerline_fonts=1
 let g:airline_theme='jay'
+let g:airline#extensions#whitespace#checks = [ 'indent', 'trailing' ]
+
+" lightline.vim Preferences
+let g:lightline = {'colorscheme': 'jay'}
+" source ~/.jayll.vim
 
 " vim-gitgutter Preferences
 let g:gitgutter_override_sign_column_highlight=0
@@ -49,6 +65,16 @@ let g:syntastic_always_populate_loc_list=1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_check_on_open=1
 let g:syntastic_check_on_wq=0
+
+" vim-markdown-preview Preferences
+let vim_markdown_preview_github=1
+
+" promptline.vim Preferences
+let g:promptline_preset = {
+	\'a': [ '\@', promptline#slices#host(), promptline#slices#user() ],
+	\'b': [ promptline#slices#vcs_branch(), promptline#slices#git_status() ],
+	\'c': [ promptline#slices#cwd() ],
+	\'warn': [ promptline#slices#last_exit_code(), promptline#slices#battery({ 'threshold': 25 }) ]}
 
 """ Key Mappings: """
 " Spell Checking
@@ -63,15 +89,29 @@ noremap <leader>nt :NERDTreeToggle<cr>
 noremap <leader>cz :UndotreeToggle<cr>
 " Tagbar
 noremap <leader>tb :TagbarToggle<cr>
+" Colorscheme Tools
+noremap <leader>hg :help highlight-groups<cr>
+noremap <leader>gn :help group-name<cr>
+noremap <leader>hit :source $VIMRUNTIME/syntax/hitest.vim<cr>
+" Other
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+noremap L A
+noremap H ^
 
 """ General: """
+if has('gui_running')
+	set guifont=Hack:h11
+endif
 if !has('gui_running')
 	set t_Co=256
 endif
+set colorcolumn=100
 set encoding=utf8
 " Colorscheme
 syntax on
-set background=dark
 colorscheme jay
 " Functionality
 set backspace=indent,eol,start
