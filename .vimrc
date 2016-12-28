@@ -112,6 +112,7 @@ set colorcolumn=100
 set encoding=utf8
 " Colorscheme
 syntax on
+set background=dark
 colorscheme jay
 " Functionality
 set backspace=indent,eol,start
