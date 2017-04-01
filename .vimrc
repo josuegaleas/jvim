@@ -1,7 +1,7 @@
 " =============================================================================
 " Author: josuegaleas
 " Source: https://github.com/josuegaleas/jvim
-" Last Edit: December 28th, 2016
+" Last Edit: March 31, 2017
 " Description: Yet another vimrc for Vim.
 " =============================================================================
 
@@ -51,7 +51,7 @@ let g:airline_theme='jay'
 let g:airline#extensions#whitespace#checks = [ 'indent', 'trailing' ]
 
 " lightline.vim Preferences
-let g:lightline = {'colorscheme': 'jay'}
+" let g:lightline = {'colorscheme': 'jay'}
 " source ~/.jayll.vim
 
 " vim-gitgutter Preferences
@@ -67,6 +67,8 @@ let g:syntastic_check_on_open=1
 let g:syntastic_check_on_wq=0
 
 " vim-markdown-preview Preferences
+let vim_markdown_preview_toggle=1
+let vim_markdown_preview_browser='Google Chrome'
 let vim_markdown_preview_github=1
 
 " promptline.vim Preferences
@@ -98,8 +100,6 @@ noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
-noremap L A
-noremap H ^
 
 """ General: """
 if has('gui_running')
