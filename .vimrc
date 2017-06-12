@@ -1,11 +1,11 @@
 " =============================================================================
 " Author: josuegaleas
 " Source: https://github.com/josuegaleas/jvim
-" Last Edit: March 31, 2017
-" Description: Yet another vimrc for Vim.
+" Last Edit: June 11, 2017
 " =============================================================================
 
-""" Plugins: """
+" =============================================================================
+" Plugins:
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -16,43 +16,89 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
 " Plugin 'itchyny/lightline.vim'
 Plugin 'josuegaleas/jay'
-Plugin 'octol/vim-cpp-enhanced-highlight'
 " Git
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 " Autocompletion
 Plugin 'ervandew/supertab'
 Plugin 'Raimondi/delimitMate'
+" Syntax Highlighting
+Plugin 'octol/vim-cpp-enhanced-highlight'
+Plugin 'mikea1729/octave.vim'
 " Other Tools
-Plugin 'scrooloose/syntastic'
+Plugin 'vim-syntastic/syntastic'
 Plugin 'scrooloose/nerdtree'
-Plugin 'mbbill/undotree'
 Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-commentary'
 Plugin 'JamshedVesuna/vim-markdown-preview'
 " Colorscheme Tools
 Plugin 'tomasr/molokai'
 Plugin 'guns/xterm-color-table.vim'
-Plugin 'chrisbra/Colorizer.git'
+Plugin 'chrisbra/Colorizer'
 Plugin 'gerw/vim-HiLinkTrace'
 " Environment
 Plugin 'edkolev/promptline.vim'
 
 call vundle#end()
 filetype plugin indent on
+" =============================================================================
 
-" vim-airline Preferences
-set showtabline=2
+" =============================================================================
+" Vim Preferences:
+if !has('gui_running')
+	set t_Co=256
+else
+	set guifont=Hack:h11
+endif
+set encoding=utf8
+" Colorscheme
+syntax enable
+set background=dark
+colorscheme jay
+" Functionality
+set backspace=indent,eol,start
+" Searches
+set incsearch
+set hlsearch
+" Indents
+set smartindent
+set autoindent
+set tabstop=4
+set shiftwidth=4
+" Number Line
+set number
+set relativenumber
+" Status Line
 set laststatus=2
+set wildmenu
 set noshowmode
+" Scroll Off
+set scrolloff=1
+set sidescrolloff=5
+" Splits
+set splitbelow
+set splitright
+" UI
+set cursorline
+set colorcolumn=80,100
+set lazyredraw
+set showmatch
+set list listchars=tab:\|\ ,
+set showtabline=2
+" Folds
+set foldmethod=indent
+" =============================================================================
+
+" =============================================================================
+" Plugin Preferences:
+" vim-airline Preferences
 let g:airline#extensions#tabline#enabled=1
 let g:airline_powerline_fonts=1
 let g:airline_theme='jay'
 let g:airline#extensions#whitespace#checks = [ 'indent', 'trailing' ]
 
 " lightline.vim Preferences
-" let g:lightline = {'colorscheme': 'jay'}
-" source ~/.jayll.vim
+let g:lightline = {'colorscheme': 'jay'}
 
 " vim-gitgutter Preferences
 let g:gitgutter_override_sign_column_highlight=0
@@ -69,71 +115,36 @@ let g:syntastic_check_on_wq=0
 " vim-markdown-preview Preferences
 let vim_markdown_preview_toggle=1
 let vim_markdown_preview_browser='Google Chrome'
+let vim_markdown_preview_temp_file=1
 let vim_markdown_preview_github=1
 
 " promptline.vim Preferences
 let g:promptline_preset = {
-	\'a': [ '\@', promptline#slices#host(), promptline#slices#user() ],
-	\'b': [ promptline#slices#vcs_branch(), promptline#slices#git_status() ],
-	\'c': [ promptline#slices#cwd() ],
-	\'warn': [ promptline#slices#last_exit_code(), promptline#slices#battery({ 'threshold': 25 }) ]}
+			\'a': [ '\@', promptline#slices#user() ],
+			\'b': [ promptline#slices#vcs_branch(), promptline#slices#git_status() ],
+			\'c': [ promptline#slices#cwd() ],
+			\'warn': [ promptline#slices#last_exit_code(), promptline#slices#battery({'threshold': 20}) ]}
+" =============================================================================
 
-""" Key Mappings: """
+" =============================================================================
+" Key Mappings:
 " Spell Checking
-noremap <leader>sc :setlocal spell!<cr>
+nnoremap <leader>sc :setlocal spell!<cr>
 " Paste Mode
-noremap <leader>pm :set paste!<cr>
+nnoremap <leader>pm :set paste!<cr>
 " Unhighlight
-noremap <leader>uh :nohlsearch<cr>
+nnoremap <leader>uh :nohlsearch<cr>
 " The NERD Tree
-noremap <leader>nt :NERDTreeToggle<cr>
-" Undotree
-noremap <leader>cz :UndotreeToggle<cr>
+nnoremap <leader>nt :NERDTreeToggle<cr>
 " Tagbar
-noremap <leader>tb :TagbarToggle<cr>
+nnoremap <leader>tb :TagbarToggle<cr>
 " Colorscheme Tools
-noremap <leader>hg :help highlight-groups<cr>
-noremap <leader>gn :help group-name<cr>
-noremap <leader>hit :source $VIMRUNTIME/syntax/hitest.vim<cr>
-" Other
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
-
-""" General: """
-if has('gui_running')
-	set guifont=Hack:h11
-endif
-if !has('gui_running')
-	set t_Co=256
-endif
-set colorcolumn=100
-set encoding=utf8
-" Colorscheme
-syntax on
-set background=dark
-colorscheme jay
-" Functionality
-set backspace=indent,eol,start
-set whichwrap+=<,>,h,l,[,]
-" Searches
-set incsearch
-set hlsearch
-" Indents
-set smartindent
-set autoindent
-" Number Line
-set relativenumber
-set number
-" UI
-set cursorline
-set wildmenu
-set lazyredraw
-set showmatch
-set list lcs=tab:\|\ "<- there is a space here
-" Tabs
-set tabstop=4
-set shiftwidth=4
-" Folds
-set foldmethod=indent
+nnoremap <leader>hg :help highlight-groups<cr>
+nnoremap <leader>gn :help group-name<cr>
+nnoremap <leader>hit :source $VIMRUNTIME/syntax/hitest.vim<cr>
+" Disable Arrow Keys
+nnoremap <Up> <NOP>
+nnoremap <Down> <NOP>
+nnoremap <Left> <NOP>
+nnoremap <Right> <NOP>
+" =============================================================================
