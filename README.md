@@ -33,7 +33,7 @@ Latest version of Vim is recommended to ensure that everything functions properl
 - If you are running on **Linux**, getting the latest version of Vim will vary between distributions.
 
 **Backup** your `.vim` folder and `.vimrc` file. (I am **not** responsible for any data loss.)
-```
+```Shell
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 git clone https://github.com/josuegaleas/jvim.git ~/.vim/jvim
 ln -s ~/.vim/jvim/.vimrc ~/.vimrc
@@ -47,7 +47,7 @@ For Tagbar to function properly, you will need to install [Exuberant Ctags](http
 
 ### Powerline Symbols
 If you would like to use powerline symbols for vim-airline, add the following line to your `.vimrc` file:
-```
+```Vim script
 let g:airline_powerline_fonts=1
 ```
 
