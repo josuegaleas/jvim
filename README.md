@@ -9,7 +9,7 @@
 - `\hit` — Runs Vim's built-in highlighting test
 
 ## Installation
-```
+```Shell
 brew install ctags grip
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 git clone https://github.com/josuegaleas/jvim.git ~/Projects/jvim
