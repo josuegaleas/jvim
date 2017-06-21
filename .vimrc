@@ -1,46 +1,39 @@
 " =============================================================================
 " Author: josuegaleas
 " Source: https://github.com/josuegaleas/jvim
-" Last Edit: June 11, 2017
+" Last Edit: June 20, 2017
 " =============================================================================
 
 " =============================================================================
 " Plugins:
-set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin()
 
-Plugin 'VundleVim/Vundle.vim'
 " Appearance
-Plugin 'vim-airline/vim-airline'
-" Plugin 'itchyny/lightline.vim'
-Plugin 'josuegaleas/jay'
+Plug 'vim-airline/vim-airline'
+" Plug 'itchyny/lightline.vim'
+Plug 'josuegaleas/jay'
+Plug 'sheerun/vim-polyglot'
 " Git
-Plugin 'tpope/vim-fugitive'
-Plugin 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 " Autocompletion
-Plugin 'ervandew/supertab'
-Plugin 'Raimondi/delimitMate'
-" Syntax Highlighting
-Plugin 'octol/vim-cpp-enhanced-highlight'
-Plugin 'mikea1729/octave.vim'
+Plug 'ervandew/supertab'
+Plug 'Raimondi/delimitMate'
 " Other Tools
-Plugin 'vim-syntastic/syntastic'
-Plugin 'scrooloose/nerdtree'
-Plugin 'majutsushi/tagbar'
-Plugin 'tpope/vim-commentary'
-Plugin 'JamshedVesuna/vim-markdown-preview'
+Plug 'vim-syntastic/syntastic'
+Plug 'scrooloose/nerdtree'
+Plug 'majutsushi/tagbar'
+Plug 'tpope/vim-commentary'
+Plug 'JamshedVesuna/vim-markdown-preview'
 " Colorscheme Tools
-Plugin 'tomasr/molokai'
-Plugin 'guns/xterm-color-table.vim'
-Plugin 'chrisbra/Colorizer'
-Plugin 'gerw/vim-HiLinkTrace'
+Plug 'tomasr/molokai'
+Plug 'guns/xterm-color-table.vim'
+Plug 'chrisbra/Colorizer'
+Plug 'gerw/vim-HiLinkTrace'
 " Environment
-Plugin 'edkolev/promptline.vim'
+Plug 'edkolev/promptline.vim'
 
-call vundle#end()
-filetype plugin indent on
+call plug#end()
 " =============================================================================
 
 " =============================================================================
@@ -52,7 +45,6 @@ else
 endif
 set encoding=utf8
 " Colorscheme
-syntax enable
 set background=dark
 colorscheme jay
 " Functionality
@@ -143,8 +135,12 @@ nnoremap <leader>hg :help highlight-groups<cr>
 nnoremap <leader>gn :help group-name<cr>
 nnoremap <leader>hit :source $VIMRUNTIME/syntax/hitest.vim<cr>
 " Disable Arrow Keys
-nnoremap <Up> <NOP>
-nnoremap <Down> <NOP>
-nnoremap <Left> <NOP>
-nnoremap <Right> <NOP>
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
 " =============================================================================

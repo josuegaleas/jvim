@@ -11,9 +11,9 @@
 ## Installation
 ```Shell
 brew install ctags grip
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-git clone https://github.com/josuegaleas/jvim.git ~/Projects/jvim
-cd ~/Projects/jvim && git checkout personal
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+git clone -b personal https://github.com/josuegaleas/jvim.git ~/Projects/jvim
 ln -s ~/Projects/jvim/.vimrc ~/.vimrc
-vim +PluginInstall +qall
+vim +PlugInstall +qall
 ```
