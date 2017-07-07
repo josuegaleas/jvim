@@ -1,7 +1,7 @@
 " =============================================================================
 " Author: josuegaleas
 " Source: https://github.com/josuegaleas/jvim
-" Last Edit: June 20, 2017
+" Last Edit: July 6, 2017
 " =============================================================================
 
 " =============================================================================
@@ -72,7 +72,7 @@ set splitbelow
 set splitright
 " UI
 set cursorline
-set colorcolumn=80,100
+set colorcolumn=80
 set lazyredraw
 set showmatch
 set list listchars=tab:\|\ ,
@@ -86,7 +86,6 @@ set foldmethod=indent
 " vim-airline Preferences
 let g:airline#extensions#tabline#enabled=1
 let g:airline_powerline_fonts=1
-let g:airline_theme='jay'
 let g:airline#extensions#whitespace#checks = [ 'indent', 'trailing' ]
 
 " lightline.vim Preferences
