@@ -2,7 +2,6 @@
 - `\sc` — Toggles Vim's spell-checking
 - `\pm` — Toggles Vim's paste mode
 - `\uh` — Unhighlights searches
-- `\nt` — Toggles The NERD Tree's filesystem explorer
 - `\tb` — Toggles Tagbar's tag explorer
 - `\hg` — Shows all highlight groups
 - `\gn` — Shows essential highlight groups

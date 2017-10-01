@@ -1,7 +1,7 @@
 " =============================================================================
 " Author: josuegaleas
 " Source: https://github.com/josuegaleas/jvim
-" Last Edit: July 6, 2017
+" Last Edit: September 30, 2017
 " =============================================================================
 
 " =============================================================================
@@ -12,6 +12,7 @@ call plug#begin()
 Plug 'vim-airline/vim-airline'
 " Plug 'itchyny/lightline.vim'
 Plug 'josuegaleas/jay'
+Plug 'tomasr/molokai'
 Plug 'sheerun/vim-polyglot'
 " Git
 Plug 'tpope/vim-fugitive'
@@ -20,13 +21,11 @@ Plug 'airblade/vim-gitgutter'
 Plug 'ervandew/supertab'
 Plug 'Raimondi/delimitMate'
 " Other Tools
-Plug 'vim-syntastic/syntastic'
-Plug 'scrooloose/nerdtree'
+Plug 'w0rp/ale'
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-commentary'
 Plug 'JamshedVesuna/vim-markdown-preview'
 " Colorscheme Tools
-Plug 'tomasr/molokai'
 Plug 'guns/xterm-color-table.vim'
 Plug 'chrisbra/Colorizer'
 Plug 'gerw/vim-HiLinkTrace'
@@ -97,21 +96,15 @@ let g:gitgutter_override_sign_column_highlight=0
 " delimitMate Preferences
 let delimitMate_expand_cr=1
 
-" Syntastic Preferences
-let g:syntastic_always_populate_loc_list=1
-let g:syntastic_auto_loc_list=1
-let g:syntastic_check_on_open=1
-let g:syntastic_check_on_wq=0
-
 " vim-markdown-preview Preferences
 let vim_markdown_preview_toggle=1
-let vim_markdown_preview_browser='Google Chrome'
+let vim_markdown_preview_browser='Waterfox'
 let vim_markdown_preview_temp_file=1
 let vim_markdown_preview_github=1
 
 " promptline.vim Preferences
 let g:promptline_preset = {
-			\'a': [ '\@', promptline#slices#user() ],
+			\'a': [ '%@', promptline#slices#user() ],
 			\'b': [ promptline#slices#vcs_branch(), promptline#slices#git_status() ],
 			\'c': [ promptline#slices#cwd() ],
 			\'warn': [ promptline#slices#last_exit_code(), promptline#slices#battery({'threshold': 20}) ]}
@@ -125,8 +118,6 @@ nnoremap <leader>sc :setlocal spell!<cr>
 nnoremap <leader>pm :set paste!<cr>
 " Unhighlight
 nnoremap <leader>uh :nohlsearch<cr>
-" The NERD Tree
-nnoremap <leader>nt :NERDTreeToggle<cr>
 " Tagbar
 nnoremap <leader>tb :TagbarToggle<cr>
 " Colorscheme Tools
