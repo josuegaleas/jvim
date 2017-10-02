@@ -1,34 +1,28 @@
 " =============================================================================
 " Author: josuegaleas
 " Source: https://github.com/josuegaleas/jvim
-" Last Edit: June 11, 2017
+" Last Edit: October 2, 2017
 " =============================================================================
 
 " =============================================================================
 " Plugins:
-set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin()
 
-Plugin 'VundleVim/Vundle.vim'
 " Appearance
-Plugin 'vim-airline/vim-airline'
-Plugin 'josuegaleas/jay'
+Plug 'vim-airline/vim-airline'
+Plug 'josuegaleas/jay'
+Plug 'sheerun/vim-polyglot'
 " Git
-Plugin 'tpope/vim-fugitive'
-Plugin 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 " Autocompletion
-Plugin 'ervandew/supertab'
-Plugin 'Raimondi/delimitMate'
-" Other Tools
-Plugin 'vim-syntastic/syntastic'
-Plugin 'scrooloose/nerdtree'
-Plugin 'majutsushi/tagbar'
-Plugin 'tpope/vim-commentary'
+Plug 'ervandew/supertab'
+Plug 'Raimondi/delimitMate'
+" Other Plugins
+Plug 'w0rp/ale'
+Plug 'tpope/vim-commentary'
 
-call vundle#end()
-filetype plugin indent on
+call plug#end()
 " =============================================================================
 
 " =============================================================================
@@ -38,7 +32,6 @@ if !has('gui_running')
 endif
 set encoding=utf8
 " Colorscheme
-syntax enable
 set background=dark
 colorscheme jay
 " Functionality
@@ -84,12 +77,6 @@ let g:gitgutter_override_sign_column_highlight=0
 
 " delimitMate Preferences
 let delimitMate_expand_cr=1
-
-" Syntastic Preferences
-let g:syntastic_always_populate_loc_list=1
-let g:syntastic_auto_loc_list=1
-let g:syntastic_check_on_open=1
-let g:syntastic_check_on_wq=0
 " =============================================================================
 
 " =============================================================================
@@ -100,8 +87,4 @@ nnoremap <leader>sc :setlocal spell!<cr>
 nnoremap <leader>pm :set paste!<cr>
 " Unhighlight
 nnoremap <leader>uh :nohlsearch<cr>
-" The NERD Tree
-nnoremap <leader>nt :NERDTreeToggle<cr>
-" Tagbar
-nnoremap <leader>tb :TagbarToggle<cr>
 " =============================================================================
