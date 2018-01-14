@@ -1,15 +1,14 @@
 " =============================================================================
 " Author: josuegaleas
 " Source: https://github.com/josuegaleas/jvim
-" Last Edit: September 30, 2017
+" Last Edit: January 13, 2018
 " =============================================================================
 
-" =============================================================================
 " Plugins:
 call plug#begin()
 
 " Appearance
-Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline'
 " Plug 'itchyny/lightline.vim'
 Plug 'josuegaleas/jay'
 Plug 'tomasr/molokai'
@@ -33,9 +32,7 @@ Plug 'gerw/vim-HiLinkTrace'
 Plug 'edkolev/promptline.vim'
 
 call plug#end()
-" =============================================================================
 
-" =============================================================================
 " Vim Preferences:
 if !has('gui_running')
 	set t_Co=256
@@ -45,6 +42,7 @@ endif
 set encoding=utf8
 " Colorscheme
 set background=dark
+" let jay_transparent=1
 colorscheme jay
 " Functionality
 set backspace=indent,eol,start
@@ -56,13 +54,11 @@ set smartindent
 set autoindent
 set tabstop=4
 set shiftwidth=4
-" Number Line
+" Number Column
 set number
 set relativenumber
-" Status Line
-set laststatus=2
-set wildmenu
-set noshowmode
+" Statusline
+source ~/.jline.vim
 " Scroll Off
 set scrolloff=1
 set sidescrolloff=5
@@ -78,9 +74,7 @@ set list listchars=tab:\|\ ,
 set showtabline=2
 " Folds
 set foldmethod=indent
-" =============================================================================
 
-" =============================================================================
 " Plugin Preferences:
 " vim-airline Preferences
 let g:airline#extensions#tabline#enabled=1
@@ -104,13 +98,11 @@ let vim_markdown_preview_github=1
 
 " promptline.vim Preferences
 let g:promptline_preset = {
-			\'a': [ '%@', promptline#slices#user() ],
+			\'a': [ '%@', promptline#slices#python_virtualenv() ],
 			\'b': [ promptline#slices#vcs_branch(), promptline#slices#git_status() ],
 			\'c': [ promptline#slices#cwd() ],
 			\'warn': [ promptline#slices#last_exit_code(), promptline#slices#battery({'threshold': 20}) ]}
-" =============================================================================
 
-" =============================================================================
 " Key Mappings:
 " Spell Checking
 nnoremap <leader>sc :setlocal spell!<cr>
@@ -118,6 +110,9 @@ nnoremap <leader>sc :setlocal spell!<cr>
 nnoremap <leader>pm :set paste!<cr>
 " Unhighlight
 nnoremap <leader>uh :nohlsearch<cr>
+" ale
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
 " Tagbar
 nnoremap <leader>tb :TagbarToggle<cr>
 " Colorscheme Tools
@@ -133,4 +128,3 @@ inoremap <up> <nop>
 inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
-" =============================================================================
