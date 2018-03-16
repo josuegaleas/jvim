@@ -6,16 +6,21 @@
 - `\hg` — Shows all highlight groups
 - `\gn` — Shows essential highlight groups
 - `\hit` — Runs Vim's built-in highlighting test
-- `^k` — Previous warning/error in ale
-- `^j` — Next warning/error in ale
+- `^k` — Previous warning/error in ALE
+- `^j` — Next warning/error in ALE
+
+## Prerequisites
+- ctags
+- grip (through pip)
+- curl
+- git
 
 ## Installation
 ```Shell
-brew install ctags grip
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-git clone -b personal https://github.com/josuegaleas/jvim.git ~/Projects/jvim
-ln -s ~/Projects/jvim/.vimrc ~/.vimrc
-ln -s ~/Projects/jvim/.jline.vim ~/.jline.vim
+git clone -b personal https://github.com/josuegaleas/jvim.git ~/.vim/jvim
+ln -s ~/.vim/jvim/.vimrc ~/.vimrc
+ln -s ~/.vim/jvim/.jline.vim ~/.jline.vim
 vim +PlugInstall +qall
 ```

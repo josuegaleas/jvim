@@ -1,7 +1,7 @@
 " =============================================================================
 " Author: josuegaleas
 " Source: https://github.com/josuegaleas/jvim
-" Last Edit: January 13, 2018
+" Last Edit: 2018.03.16
 " =============================================================================
 
 " Plugins:
@@ -11,7 +11,6 @@ call plug#begin()
 " Plug 'vim-airline/vim-airline'
 " Plug 'itchyny/lightline.vim'
 Plug 'josuegaleas/jay'
-Plug 'tomasr/molokai'
 Plug 'sheerun/vim-polyglot'
 " Git
 Plug 'tpope/vim-fugitive'
@@ -23,13 +22,14 @@ Plug 'Raimondi/delimitMate'
 Plug 'w0rp/ale'
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-commentary'
+Plug 'ntpeters/vim-better-whitespace'
 Plug 'JamshedVesuna/vim-markdown-preview'
 " Colorscheme Tools
-Plug 'guns/xterm-color-table.vim'
-Plug 'chrisbra/Colorizer'
-Plug 'gerw/vim-HiLinkTrace'
+" Plug 'guns/xterm-color-table.vim'
+" Plug 'chrisbra/Colorizer'
+" Plug 'gerw/vim-HiLinkTrace'
 " Environment
-Plug 'edkolev/promptline.vim'
+" Plug 'edkolev/promptline.vim'
 
 call plug#end()
 
@@ -69,6 +69,7 @@ set splitright
 set cursorline
 set colorcolumn=80
 set lazyredraw
+set updatetime=100
 set showmatch
 set list listchars=tab:\|\ ,
 set showtabline=2
@@ -97,11 +98,11 @@ let vim_markdown_preview_temp_file=1
 let vim_markdown_preview_github=1
 
 " promptline.vim Preferences
-let g:promptline_preset = {
-			\'a': [ '%@', promptline#slices#python_virtualenv() ],
-			\'b': [ promptline#slices#vcs_branch(), promptline#slices#git_status() ],
-			\'c': [ promptline#slices#cwd() ],
-			\'warn': [ promptline#slices#last_exit_code(), promptline#slices#battery({'threshold': 20}) ]}
+" let g:promptline_preset = {
+" 			\'a': [ '%@' ],
+" 			\'b': [ promptline#slices#vcs_branch(), promptline#slices#git_status() ],
+" 			\'c': [ promptline#slices#cwd() ],
+" 			\'warn': [ promptline#slices#last_exit_code(), promptline#slices#battery({'threshold': 20}) ]}
 
 " Key Mappings:
 " Spell Checking
@@ -110,7 +111,7 @@ nnoremap <leader>sc :setlocal spell!<cr>
 nnoremap <leader>pm :set paste!<cr>
 " Unhighlight
 nnoremap <leader>uh :nohlsearch<cr>
-" ale
+" ALE
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 " Tagbar
