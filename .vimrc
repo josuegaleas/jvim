@@ -1,15 +1,13 @@
 " =============================================================================
 " Author: josuegaleas
 " Source: https://github.com/josuegaleas/jvim
-" Last Edit: 2018.03.16
+" Last Edit: 2018.06.23
 " =============================================================================
 
 " Plugins:
 call plug#begin()
 
 " Appearance
-" Plug 'vim-airline/vim-airline'
-" Plug 'itchyny/lightline.vim'
 Plug 'josuegaleas/jay'
 Plug 'sheerun/vim-polyglot'
 " Git
@@ -20,35 +18,33 @@ Plug 'ervandew/supertab'
 Plug 'Raimondi/delimitMate'
 " Other Tools
 Plug 'w0rp/ale'
-Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-commentary'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'JamshedVesuna/vim-markdown-preview'
-" Colorscheme Tools
+" Colorscheme Development
+" Plug 'vim-airline/vim-airline'
+" Plug 'itchyny/lightline.vim'
 " Plug 'guns/xterm-color-table.vim'
 " Plug 'chrisbra/Colorizer'
 " Plug 'gerw/vim-HiLinkTrace'
-" Environment
-" Plug 'edkolev/promptline.vim'
 
 call plug#end()
 
 " Vim Preferences:
 if !has('gui_running')
 	set t_Co=256
-else
-	set guifont=Hack:h11
 endif
 set encoding=utf8
-" Colorscheme
+" Appearance
 set background=dark
 " let jay_transparent=1
 colorscheme jay
-" Functionality
-set backspace=indent,eol,start
-" Searches
-set incsearch
-set hlsearch
+source ~/.jline.vim
+set cursorline
+set colorcolumn=80
+set showmatch
+set list listchars=tab:\|\ ,
+set showtabline=2
 " Indents
 set smartindent
 set autoindent
@@ -57,30 +53,23 @@ set shiftwidth=4
 " Number Column
 set number
 set relativenumber
-" Statusline
-source ~/.jline.vim
-" Scroll Off
-set scrolloff=1
-set sidescrolloff=5
+" Searches
+set incsearch
+set hlsearch
 " Splits
 set splitbelow
 set splitright
-" UI
-set cursorline
-set colorcolumn=80
+" Other
+set backspace=indent,eol,start
+set scrolloff=2
+set foldmethod=indent
 set lazyredraw
 set updatetime=100
-set showmatch
-set list listchars=tab:\|\ ,
-set showtabline=2
-" Folds
-set foldmethod=indent
 
 " Plugin Preferences:
 " vim-airline Preferences
 let g:airline#extensions#tabline#enabled=1
 let g:airline_powerline_fonts=1
-let g:airline#extensions#whitespace#checks = [ 'indent', 'trailing' ]
 
 " lightline.vim Preferences
 let g:lightline = {'colorscheme': 'jay'}
@@ -93,29 +82,20 @@ let delimitMate_expand_cr=1
 
 " vim-markdown-preview Preferences
 let vim_markdown_preview_toggle=1
-let vim_markdown_preview_browser='Waterfox'
+let vim_markdown_preview_browser='Firefox Nightly'
 let vim_markdown_preview_temp_file=1
 let vim_markdown_preview_github=1
-
-" promptline.vim Preferences
-" let g:promptline_preset = {
-" 			\'a': [ '%@' ],
-" 			\'b': [ promptline#slices#vcs_branch(), promptline#slices#git_status() ],
-" 			\'c': [ promptline#slices#cwd() ],
-" 			\'warn': [ promptline#slices#last_exit_code(), promptline#slices#battery({'threshold': 20}) ]}
 
 " Key Mappings:
 " Spell Checking
 nnoremap <leader>sc :setlocal spell!<cr>
 " Paste Mode
 nnoremap <leader>pm :set paste!<cr>
-" Unhighlight
+" Un-highlight
 nnoremap <leader>uh :nohlsearch<cr>
 " ALE
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
-" Tagbar
-nnoremap <leader>tb :TagbarToggle<cr>
 " Colorscheme Tools
 nnoremap <leader>hg :help highlight-groups<cr>
 nnoremap <leader>gn :help group-name<cr>

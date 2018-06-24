@@ -1,7 +1,7 @@
 " =============================================================================
 " Author: josuegaleas
 " Source: https://github.com/josuegaleas/jvim
-" Last Edit: January 14, 2018
+" Last Edit: 2018.01.14
 " =============================================================================
 
 " Functions:
@@ -30,6 +30,7 @@ function! GitStatus() abort
 
 	let l:hunk = GitGutterGetHunkSummary()
 	let l:branch = fugitive#head()
+
 	return printf(' +%d ~%d -%d  %s ', l:hunk[0], l:hunk[1], l:hunk[2], l:branch)
 endfunction
 
@@ -43,8 +44,10 @@ endfunction
 
 function! LinterStatus() abort
 	let l:counts = ale#statusline#Count(bufnr(''))
+
 	let l:all_errors = l:counts.error + l:counts.style_error
 	let l:all_non_errors = l:counts.total - l:all_errors
+
 	return l:counts.total == 0 ? '':printf(' W:%d E:%d', l:all_non_errors, l:all_errors)
 endfunction
 
