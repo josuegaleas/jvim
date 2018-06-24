@@ -1,6 +1,10 @@
 # jvim
 Yet another `.vimrc` on GitHub.
 
+**Branches**
+- `master` is for beginners
+- `personal` is my setup
+
 ## Plugins
 **Appearance**
 - [vim-airline](https://github.com/vim-airline/vim-airline) — For a better statusline and tabline
@@ -23,15 +27,15 @@ Yet another `.vimrc` on GitHub.
 ## Key Mappings
 - `\sc` — Toggles Vim's spell-checking mode
 - `\pm` — Toggles Vim's paste mode
-- `\uh` — Unhighlights searches
+- `\uh` — Un-highlights searches
 
 ## Installation
-Latest version of Vim is recommended to ensure that everything functions properly.
-- If you are running on **macOS**, click [here](./macOS.md) for a small guide on how to get the latest version.
-- If you are running on **Linux**, getting the latest version will vary between distributions.
+Having the latest version of Vim is recommended to ensure that everything works.
+- On **macOS**, install the latest version with [Homebrew](https://brew.sh/) using `brew install vim`.
+- On **Linux**, getting the latest version will vary between distributions.
 
 **Backup** your `.vim` folder and `.vimrc` file. (I am **not** responsible for any data loss.)
-```Shell
+```bash
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 git clone https://github.com/josuegaleas/jvim.git ~/.vim/jvim
@@ -41,7 +45,7 @@ vim +PlugInstall +qall
 
 ### Powerline Symbols
 If you would like to use powerline symbols for vim-airline, add the following line to your `.vimrc` file:
-```Vim script
+```viml
 let g:airline_powerline_fonts=1
 ```
 
