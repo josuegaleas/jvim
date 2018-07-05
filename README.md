@@ -22,3 +22,6 @@ ln -s ~/.vim/jvim/.vimrc ~/.vimrc
 ln -s ~/.vim/jvim/.jline.vim ~/.jline.vim
 vim +PlugInstall +qall
 ```
+
+## References
+- [The Last Statusline For Vim](https://hackernoon.com/the-last-statusline-for-vim-a613048959b2)
