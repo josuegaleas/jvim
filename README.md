@@ -8,11 +8,6 @@
 - `^k` — Previous warning/error in ALE
 - `^j` — Next warning/error in ALE
 
-## Prerequisites
-- curl
-- git
-- grip (through pip)
-
 ## Installation
 ```bash
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \

@@ -16,7 +16,7 @@ let g:currentmode = {
 			\ '!':'Shell', 't':'Terminal'}
 
 function! CurrentMode() abort
-	if &filetype ==# 'help' || &filetype ==# 'netrw'
+	if &filetype ==# 'help' || &filetype ==# 'netrw' || &filetype ==# 'vim-plug'
 		return toupper(&filetype)
 	else
 		return toupper(get(g:currentmode, mode(), 'Error'))
@@ -35,7 +35,7 @@ function! GitStatus() abort
 endfunction
 
 function! FileType() abort
-	if &filetype ==# 'help' || &filetype ==# 'netrw'
+	if &filetype ==# 'help' || &filetype ==# 'netrw' || &filetype ==# 'vim-plug'
 		return ''
 	else
 		return &filetype

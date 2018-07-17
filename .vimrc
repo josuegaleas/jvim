@@ -1,7 +1,7 @@
 " =============================================================================
 " Author: josuegaleas
 " Source: https://github.com/josuegaleas/jvim
-" Last Edit: 2018.06.23
+" Last Edit: 2018.07.17
 " =============================================================================
 
 " Plugins:
@@ -20,7 +20,6 @@ Plug 'Raimondi/delimitMate'
 Plug 'w0rp/ale'
 Plug 'tpope/vim-commentary'
 Plug 'ntpeters/vim-better-whitespace'
-Plug 'JamshedVesuna/vim-markdown-preview'
 " Colorscheme Development
 " Plug 'vim-airline/vim-airline'
 " Plug 'itchyny/lightline.vim'
@@ -69,7 +68,6 @@ set updatetime=100
 " Plugin Preferences:
 " vim-airline Preferences
 let g:airline#extensions#tabline#enabled=1
-let g:airline_powerline_fonts=1
 
 " lightline.vim Preferences
 let g:lightline = {'colorscheme': 'jay'}
@@ -79,12 +77,6 @@ let g:gitgutter_override_sign_column_highlight=0
 
 " delimitMate Preferences
 let delimitMate_expand_cr=1
-
-" vim-markdown-preview Preferences
-let vim_markdown_preview_toggle=1
-let vim_markdown_preview_browser='Firefox Nightly'
-let vim_markdown_preview_temp_file=1
-let vim_markdown_preview_github=1
 
 " Key Mappings:
 " Spell Checking
@@ -96,7 +88,7 @@ nnoremap <leader>uh :nohlsearch<cr>
 " ALE
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
-" Colorscheme Tools
+" Colorscheme Development
 nnoremap <leader>hg :help highlight-groups<cr>
 nnoremap <leader>gn :help group-name<cr>
 nnoremap <leader>hit :source $VIMRUNTIME/syntax/hitest.vim<cr>
