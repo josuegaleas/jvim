@@ -1,7 +1,7 @@
 " =============================================================================
 " Author: josuegaleas
 " Source: https://github.com/josuegaleas/jvim
-" Last Edit: 2018.07.17
+" Last Edit: 2018.09.29
 " =============================================================================
 
 " Plugins:
@@ -21,6 +21,7 @@ Plug 'w0rp/ale'
 Plug 'tpope/vim-commentary'
 Plug 'ntpeters/vim-better-whitespace'
 " Colorscheme Development
+" Plug 'tomasr/molokai'
 " Plug 'vim-airline/vim-airline'
 " Plug 'itchyny/lightline.vim'
 " Plug 'guns/xterm-color-table.vim'
@@ -77,6 +78,12 @@ let g:gitgutter_override_sign_column_highlight=0
 
 " delimitMate Preferences
 let delimitMate_expand_cr=1
+
+" ALE Preferences
+let g:ale_linters = {'cpp': ['clang']}
+
+" vim-better-whitespace Preferences
+hi ExtraWhitespace guifg=NONE ctermfg=NONE guibg=#df5f5f ctermbg=167 gui=NONE cterm=NONE term=NONE
 
 " Key Mappings:
 " Spell Checking
