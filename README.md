@@ -1,33 +1,32 @@
 # jvim
-Yet another `.vimrc` on GitHub.
-
-**Branches**
-- `master` is for beginners
-- `personal` is my setup
+Yet another `.vimrc` on GitHub. Powered by [vim-plug](https://github.com/junegunn/vim-plug).
 
 ## Plugins
 **Appearance**
-- [vim-airline](https://github.com/vim-airline/vim-airline) — For a better statusline and tabline
-- [jay](https://github.com/josuegaleas/jay) — My own colorscheme for Vim, Airline, and Lightline
-- [vim-polyglot](https://github.com/sheerun/vim-polyglot) — For better syntax highlighting
+- [jay](https://github.com/josuegaleas/jay)
+- [vim-polyglot](https://github.com/sheerun/vim-polyglot)
 
 **Git**
-- [fugitive.vim](https://github.com/tpope/vim-fugitive) — For Git functionality within Vim
-- [vim-gitgutter](https://github.com/airblade/vim-gitgutter) — For a Git diff in the gutter, and hunk functionality
+- [fugitive.vim](https://github.com/tpope/vim-fugitive)
+- [vim-gitgutter](https://github.com/airblade/vim-gitgutter)
 
-**Autocompletion**
-- [Supertab](https://github.com/ervandew/supertab.git) — For general insert completion
-- [delimitMate](https://github.com/Raimondi/delimitMate) — For auto-completion of quotes, parenthesis, brackets, etc
+**Other Tools**
+- [supertab](https://github.com/ervandew/supertab)
+- [ALE](https://github.com/dense-analysis/ale)
+- [commentary.vim](https://github.com/tpope/vim-commentary)
+- [Vim Better Whitespace](https://github.com/ntpeters/vim-better-whitespace)
 
-**Other Plugins**
-- [vim-plug](https://github.com/junegunn/vim-plug) — For managing plugins and runtime files
-- [ALE](https://github.com/w0rp/ale) — For linting and syntax checking
-- [commentary.vim](https://github.com/tpope/vim-commentary) — For quick commenting
-
-## Key Mappings
-- `\sc` — Toggles Vim's spell-checking mode
+## Key Mappings for General Use
+- `\sc` — Toggles Vim's spell-checking
 - `\pm` — Toggles Vim's paste mode
 - `\uh` — Un-highlights searches
+- `^k` — Previous warning/error in ALE
+- `^j` — Next warning/error in ALE
+
+## Key Mappings for Colorscheme Development
+- `\hg` — Shows all highlight groups
+- `\gn` — Shows essential highlight groups
+- `\hit` — Runs Vim's built-in highlighting test
 
 ## Installation
 Having the latest version of Vim is recommended to ensure that everything works.
@@ -40,16 +39,12 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 git clone https://github.com/josuegaleas/jvim.git ~/.vim/jvim
 ln -s ~/.vim/jvim/.vimrc ~/.vimrc
+ln -s ~/.vim/jvim/.jline.vim ~/.jline.vim
 vim +PlugInstall +qall
 ```
 
-### Powerline Symbols
-If you would like to use powerline symbols for vim-airline, add the following line to your `.vimrc` file:
-```viml
-let g:airline_powerline_fonts=1
-```
-
 ## References
-- Mir Nazim's [Vim setup](http://mirnazim.org/writings/vim-plugins-i-use/)
-- Doug Black's [recommendations](http://dougblack.io/words/a-good-vimrc.html)
-- Luciano Fiandesio's [Vim setup](http://www.lucianofiandesio.com/vim-configuration-for-happy-java-coding)
+- Mir Nazim's [setup](https://web.archive.org/web/20180430054624/http://mirnazim.org/writings/vim-plugins-i-use/)
+- Doug Black's [recommendations](https://web.archive.org/web/20200202000014/http://dougblack.io/words/a-good-vimrc.html)
+- Luciano Fiandesio's [setup](http://fiandes.io/vim-configuration-for-happy-java-coding/)
+- [The Last Statusline For Vim](https://hackernoon.com/the-last-statusline-for-vim-a613048959b2)
