@@ -1,7 +1,7 @@
 " =============================================================================
 " Author: josuegaleas
 " Source: https://github.com/josuegaleas/jvim
-" Last Edit: 2020.10.10
+" Last Edit: 2021.06.30
 " =============================================================================
 
 " Plugins:
@@ -18,6 +18,8 @@ Plug 'ervandew/supertab'
 Plug 'dense-analysis/ale'
 Plug 'tpope/vim-commentary'
 Plug 'ntpeters/vim-better-whitespace'
+Plug 'LucHermitte/lh-vim-lib'
+Plug 'LucHermitte/local_vimrc'
 " Colorscheme Development
 " Plug 'tomasr/molokai'
 " Plug 'vim-airline/vim-airline'
@@ -71,11 +73,12 @@ let g:airline#extensions#tabline#enabled=1
 " lightline.vim Preferences
 let g:lightline = {'colorscheme': 'jay'}
 
-" ALE Preferences
-let g:ale_cpp_cc_options = '-std=c++17 -Weverything -Wno-c++98-compat -Wc++98-c++11-c++14-c++17-compat -Wno-padded -Wno-unused-macros'
-
 " vim-better-whitespace Preferences
 hi ExtraWhitespace guifg=NONE ctermfg=NONE guibg=#df5f5f ctermbg=167 gui=NONE cterm=NONE term=NONE
+
+" local_vimrc Preferences
+let g:local_vimrc = ['.clangflags.vim']
+call lh#local_vimrc#munge('whitelist', $HOME.'/Projects')
 
 " Key Mappings:
 " Spell Checking

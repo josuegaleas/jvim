@@ -15,6 +15,7 @@ Yet another `.vimrc` on GitHub. Powered by [vim-plug](https://github.com/junegun
 - [ALE](https://github.com/dense-analysis/ale)
 - [commentary.vim](https://github.com/tpope/vim-commentary)
 - [Vim Better Whitespace](https://github.com/ntpeters/vim-better-whitespace)
+- [local_vimrc](https://github.com/LucHermitte/local_vimrc)
 
 ## Key Mappings for General Use
 - `\sc` — Toggles Vim's spell-checking

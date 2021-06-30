@@ -1,7 +1,7 @@
 " =============================================================================
 " Author: josuegaleas
 " Source: https://github.com/josuegaleas/jvim
-" Last Edit: 2018.07.05
+" Last Edit: 2021.06.30
 " =============================================================================
 
 " Functions:
@@ -19,19 +19,19 @@ function! CurrentMode() abort
 	if &filetype ==# 'help' || &filetype ==# 'netrw' || &filetype ==# 'vim-plug'
 		return toupper(&filetype)
 	else
-		return toupper(get(g:currentmode, mode(), 'Error'))
+		return toupper(get(g:currentmode, mode(), 'UNKNOWN'))
 	endif
 endfunction
 
 function! GitStatus() abort
-	if !exists('b:git_dir')
+	if !exists('b:git_dir') || len(b:git_dir) == 0
 		return ''
 	endif
 
-	let l:hunk = GitGutterGetHunkSummary()
-	let l:branch = fugitive#head()
+	let [a, m, r] = GitGutterGetHunkSummary()
+	let branch = fugitive#head()
 
-	return printf(' +%d ~%d -%d, %s |', l:hunk[0], l:hunk[1], l:hunk[2], l:branch)
+	return printf(' +%d ~%d -%d ¦ %s |', a, m, r, branch)
 endfunction
 
 function! FileType() abort
@@ -48,13 +48,15 @@ function! LinterStatus() abort
 	let l:all_errors = l:counts.error + l:counts.style_error
 	let l:all_non_errors = l:counts.total - l:all_errors
 
-	return l:counts.total == 0 ? '':printf('| W:%d E:%d ', l:all_non_errors, l:all_errors)
+	return l:counts.total == 0 ? '' : printf('| W:%d E:%d ', all_non_errors, all_errors)
 endfunction
 
 " Statusline:
 set laststatus=2
 set statusline=
 set statusline+=\ %{CurrentMode()}
+set statusline+=%{&paste?'\ \ \¦\ PASTE':''}
+set statusline+=%{&spell?'\ \ \¦\ SPELL':''}
 set statusline+=\ \|%{GitStatus()}
 set statusline+=\ %f
 set statusline+=%{&modified?'[+]':''}
