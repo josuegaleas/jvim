@@ -1,7 +1,7 @@
 " =============================================================================
 " Author: josuegaleas
 " Source: https://github.com/josuegaleas/jvim
-" Last Edit: 2021.06.30
+" Last Edit: 2022.07.04
 " =============================================================================
 
 " Functions:
@@ -24,14 +24,14 @@ function! CurrentMode() abort
 endfunction
 
 function! GitStatus() abort
-	if !exists('b:git_dir') || len(b:git_dir) == 0
+	let branch = FugitiveHead()
+
+	if branch == ''
 		return ''
+	else
+		let [a, m, r] = GitGutterGetHunkSummary()
+		return printf(' +%d ~%d -%d ¦ %s |', a, m, r, branch)
 	endif
-
-	let [a, m, r] = GitGutterGetHunkSummary()
-	let branch = fugitive#head()
-
-	return printf(' +%d ~%d -%d ¦ %s |', a, m, r, branch)
 endfunction
 
 function! FileType() abort

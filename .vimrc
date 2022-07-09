@@ -1,7 +1,7 @@
 " =============================================================================
 " Author: josuegaleas
 " Source: https://github.com/josuegaleas/jvim
-" Last Edit: 2021.06.30
+" Last Edit: 2022.05.01
 " =============================================================================
 
 " Plugins:
@@ -72,6 +72,9 @@ let g:airline#extensions#tabline#enabled=1
 
 " lightline.vim Preferences
 let g:lightline = {'colorscheme': 'jay'}
+
+" ale Preferences
+let g:ale_lint_on_text_changed = 'never'
 
 " vim-better-whitespace Preferences
 hi ExtraWhitespace guifg=NONE ctermfg=NONE guibg=#df5f5f ctermbg=167 gui=NONE cterm=NONE term=NONE
