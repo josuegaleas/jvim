@@ -1,7 +1,7 @@
 " =============================================================================
 " Author: josuegaleas
 " Source: https://github.com/josuegaleas/jvim
-" Last Edit: 2022.05.01
+" Last Edit: 2024.08.23
 " =============================================================================
 
 " Plugins:
@@ -41,10 +41,10 @@ set background=dark
 colorscheme jay
 source ~/.jline.vim
 set cursorline
-set colorcolumn=80
+set colorcolumn=100
 set showmatch
 set list listchars=tab:\|\ ,
-set showtabline=2
+set showtabline=1
 " Indents
 set smartindent
 set autoindent
@@ -68,23 +68,25 @@ set updatetime=100
 
 " Plugin Preferences:
 " vim-airline Preferences
-let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#tabline#enabled = 1
 
 " lightline.vim Preferences
 let g:lightline = {'colorscheme': 'jay'}
 
 " ale Preferences
 let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_insert_leave = 0
 
 " vim-better-whitespace Preferences
-hi ExtraWhitespace guifg=NONE ctermfg=NONE guibg=#df5f5f ctermbg=167 gui=NONE cterm=NONE term=NONE
+let g:better_whitespace_ctermcolor = 167
+let g:better_whitespace_guicolor = '#df5f5f'
 
 " local_vimrc Preferences
-let g:local_vimrc = ['.clangflags.vim']
+let g:local_vimrc = ['.cpp_flags.vim']
 call lh#local_vimrc#munge('whitelist', $HOME.'/Projects')
 
 " Key Mappings:
-" Spell Checking
+" Spellchecking
 nnoremap <leader>sc :setlocal spell!<cr>
 " Paste Mode
 nnoremap <leader>pm :set paste!<cr>
@@ -94,15 +96,6 @@ nnoremap <leader>uh :nohlsearch<cr>
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 " Colorscheme Development
-nnoremap <leader>hg :help highlight-groups<cr>
-nnoremap <leader>gn :help group-name<cr>
-nnoremap <leader>hit :source $VIMRUNTIME/syntax/hitest.vim<cr>
-" Disable Arrow Keys
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
+" nnoremap <leader>hg :help highlight-groups<cr>
+" nnoremap <leader>gn :help group-name<cr>
+" nnoremap <leader>hit :source $VIMRUNTIME/syntax/hitest.vim<cr>
