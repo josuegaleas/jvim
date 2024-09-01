@@ -1,45 +1,46 @@
 " =============================================================================
 " Author: josuegaleas
 " Source: https://github.com/josuegaleas/jvim
-" Last Edit: 2022.07.04
+" Last Edit: 2024.08.31
 " =============================================================================
 
+let s:modes = {
+			\'n':'Normal',
+			\'v':'Visual', 'V':'V-Line', '^V':'V-Block',
+			\'s':'Select', 'S': 'S-Line', '^S':'S-Block',
+			\'i':'Insert',
+			\'R':'Replace',
+			\'c':'Command',
+			\'r':'Prompt',
+			\'!':'Shell',
+			\'t':'Terminal'}
+
 " Functions:
-let g:currentmode = {
-			\ 'n':'Normal', 'no':'N·Operator Pending',
-			\ 'v':'Visual', 'V':'V·Line', '^V':'V·Block',
-			\ 's':'Select', 'S': 'S·Line', '^S':'S·Block',
-			\ 'i':'Insert', 'ic':'I·compl-generic', 'ix':'I·i_CTRL-X',
-			\ 'R':'Replace', 'Rc':'R·compl-generic', 'Rv':'R·Virtual', 'Rx':'R·i_CTRL-X',
-			\ 'c':'Command', 'cv':'Vim Ex', 'ce':'Normal Ex',
-			\ 'r':'Prompt', 'rm':'More', 'r?':'Confirm',
-			\ '!':'Shell', 't':'Terminal'}
+function! CheckFileType() abort
+	return &filetype ==? 'help' || &filetype ==? 'netrw' || &filetype ==? 'vim-plug'
+endfunction
 
 function! CurrentMode() abort
-	if &filetype ==# 'help' || &filetype ==# 'netrw' || &filetype ==# 'vim-plug'
-		return toupper(&filetype)
-	else
-		return toupper(get(g:currentmode, mode(), 'UNKNOWN'))
-	endif
+	return toupper(CheckFileType() ? &filetype : get(s:modes, mode(), 'Unknown'))
 endfunction
 
 function! GitStatus() abort
-	let branch = FugitiveHead()
+	if CheckFileType() || mode() ==? 't'
+		return ''
+	endif
 
-	if branch == ''
+	let l:branch = FugitiveHead()
+
+	if branch ==? ''
 		return ''
 	else
-		let [a, m, r] = GitGutterGetHunkSummary()
+		let [l:a, l:m, l:r] = GitGutterGetHunkSummary()
 		return printf(' +%d ~%d -%d ¦ %s |', a, m, r, branch)
 	endif
 endfunction
 
 function! FileType() abort
-	if &filetype ==# 'help' || &filetype ==# 'netrw' || &filetype ==# 'vim-plug'
-		return ''
-	else
-		return &filetype
-	endif
+	return CheckFileType() ? '' : &filetype
 endfunction
 
 function! LinterStatus() abort
@@ -52,7 +53,6 @@ function! LinterStatus() abort
 endfunction
 
 " Statusline:
-set laststatus=2
 set statusline=
 set statusline+=\ %{CurrentMode()}
 set statusline+=%{&paste?'\ \ \¦\ PASTE':''}
@@ -66,5 +66,6 @@ set statusline+=%{FileType()}
 set statusline+=\ \|\ %l/%L
 set statusline+=\ %{LinterStatus()}
 
-set wildmenu
+set laststatus=2
 set noshowmode
+set wildmenu
