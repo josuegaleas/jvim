@@ -24,6 +24,7 @@ Yet another `.vimrc` on GitHub. Powered by [vim-plug](https://github.com/junegun
 - [Xterm Color Table](https://github.com/guns/xterm-color-table.vim)
 - [Colorizer](https://github.com/chrisbra/Colorizer)
 - [vim-HiLinkTrace](https://github.com/gerw/vim-HiLinkTrace)
+- [Vim's colorscheme incubator](https://github.com/vim/colorschemes)
 
 ## Key Mappings
 **General Use**

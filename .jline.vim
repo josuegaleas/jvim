@@ -1,7 +1,7 @@
 " =============================================================================
 " Author: josuegaleas
 " Source: https://github.com/josuegaleas/jvim
-" Last Edit: 2024.08.31
+" Last Edit: 2024.12.09
 " =============================================================================
 
 let s:modes = {
@@ -25,7 +25,7 @@ function! CurrentMode() abort
 endfunction
 
 function! GitStatus() abort
-	if CheckFileType() || mode() ==? 't'
+	if CheckFileType() || mode() ==? 't' || !exists("*FugitiveHead") || !exists("*GitGutterGetHunkSummary")
 		return ''
 	endif
 
@@ -44,6 +44,10 @@ function! FileType() abort
 endfunction
 
 function! LinterStatus() abort
+	if !exists("*ale#statusline#Count")
+		return ''
+	endif
+
 	let l:counts = ale#statusline#Count(bufnr(''))
 
 	let l:all_errors = l:counts.error + l:counts.style_error

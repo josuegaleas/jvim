@@ -1,7 +1,7 @@
 " =============================================================================
 " Author: josuegaleas
 " Source: https://github.com/josuegaleas/jvim
-" Last Edit: 2024.08.23
+" Last Edit: 2024.12.09
 " =============================================================================
 
 " Plugins:
@@ -27,6 +27,7 @@ Plug 'LucHermitte/local_vimrc'
 " Plug 'guns/xterm-color-table.vim'
 " Plug 'chrisbra/Colorizer'
 " Plug 'gerw/vim-HiLinkTrace'
+" Plug 'vim/colorschemes'
 
 call plug#end()
 
@@ -37,14 +38,13 @@ endif
 set encoding=utf8
 " Appearance
 set background=dark
-" let jay_transparent=1
-colorscheme jay
+" let jay_transparent = 1
+silent! colorscheme jay
 source ~/.jline.vim
 set cursorline
 set colorcolumn=100
 set showmatch
 set list listchars=tab:\|\ ,
-set showtabline=1
 " Indents
 set smartindent
 set autoindent
@@ -68,6 +68,7 @@ set updatetime=100
 
 " Plugin Preferences:
 " vim-airline Preferences
+let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
 " lightline.vim Preferences
@@ -77,13 +78,9 @@ let g:lightline = {'colorscheme': 'jay'}
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_insert_leave = 0
 
-" vim-better-whitespace Preferences
-let g:better_whitespace_ctermcolor = 167
-let g:better_whitespace_guicolor = '#df5f5f'
-
 " local_vimrc Preferences
 let g:local_vimrc = ['.cpp_flags.vim']
-call lh#local_vimrc#munge('whitelist', $HOME.'/Projects')
+silent! call lh#local_vimrc#munge('whitelist', $HOME.'/Projects')
 
 " Key Mappings:
 " Spellchecking
