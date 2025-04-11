@@ -1,7 +1,7 @@
 " =============================================================================
 " Author: josuegaleas
 " Source: https://github.com/josuegaleas/jvim
-" Last Edit: 2024.12.09
+" Last Edit: 2025.04.10
 " =============================================================================
 
 " Plugins:
@@ -18,7 +18,7 @@ Plug 'ervandew/supertab'
 Plug 'dense-analysis/ale'
 Plug 'tpope/vim-commentary'
 Plug 'ntpeters/vim-better-whitespace'
-Plug 'LucHermitte/lh-vim-lib'
+Plug 'LucHermitte/lh-vim-lib', {'commit': '4e22e197368a2e0d031489cb0f777f7c7a6c1884'}
 Plug 'LucHermitte/local_vimrc'
 " Colorscheme Development
 " Plug 'tomasr/molokai'
@@ -77,6 +77,7 @@ let g:lightline = {'colorscheme': 'jay'}
 " ale Preferences
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_insert_leave = 0
+let g:ale_cpp_cppcheck_options = '--enable=style --check-level=exhaustive'
 
 " local_vimrc Preferences
 let g:local_vimrc = ['.cpp_flags.vim']

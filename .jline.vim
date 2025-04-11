@@ -1,7 +1,7 @@
 " =============================================================================
 " Author: josuegaleas
 " Source: https://github.com/josuegaleas/jvim
-" Last Edit: 2024.12.09
+" Last Edit: 2025.04.10
 " =============================================================================
 
 let s:modes = {
@@ -44,11 +44,11 @@ function! FileType() abort
 endfunction
 
 function! LinterStatus() abort
-	if !exists("*ale#statusline#Count")
+	try
+		let l:counts = ale#statusline#Count(bufnr(''))
+	catch
 		return ''
-	endif
-
-	let l:counts = ale#statusline#Count(bufnr(''))
+	endtry
 
 	let l:all_errors = l:counts.error + l:counts.style_error
 	let l:all_non_errors = l:counts.total - l:all_errors
